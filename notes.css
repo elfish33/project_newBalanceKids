@@ -1,0 +1,13 @@
+
+/* row 2 product card안에 있는 color swatch */
+.color-swatch {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 8px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.black { background-color: #000; }
+.beige { background-color: #f5e3d9; }
