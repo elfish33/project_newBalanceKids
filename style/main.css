@@ -1,0 +1,11 @@
+body header {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+body header .left_gnb { /* logo */ }
+body header .left_gnb a {
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=main.css.map */

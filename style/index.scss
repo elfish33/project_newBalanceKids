@@ -1,0 +1,19 @@
+@use './common.scss' as *;
+
+body {
+    header {
+        width: 100%;
+        @include flex-row;
+        .left_gnb {
+            h1 > a > img {}/* logo */
+            a {
+                font-weight: $bold;
+            }
+        }
+        .right_gnb {
+            a {
+                img {}
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+//변수 
+
+$bold: 700;
+
+
+//mixin
+@mixin flex-row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+@mixin flex-col {
+    display: flex;
+    flex-flow: column nowrap;
+}
