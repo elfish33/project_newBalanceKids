@@ -7,8 +7,52 @@ $bold: 700;
 @mixin flex-row {
     display: flex;
     flex-flow: row nowrap;
+    
 }
 @mixin flex-col {
     display: flex;
     flex-flow: column nowrap;
+}
+
+@mixin title_h1 {
+    font-size: 3rem; /* 48px */
+    font-weight: 700; /* bold */
+    line-height: 100%;
+    letter-spacing: -2%;
+}
+
+@mixin product_title {
+    font-weight: 700; /* bold */
+    line-height: 100%;
+    letter-spacing: -2%;
+    font-size: 1.125rem;/* 18px */
+}
+@mixin product_price {
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -2%;
+}
+@mixin product_size {
+    line-height: 100%;
+    letter-spacing: -2%;
+    font-size: 0.75rem; /* 12px */
+    color: #7D7C7C;
+}
+@mixin color_swatch {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+}
+@mixin age_btn {
+    width: 133px; height: 42px;
+    background-color: #F5F5F5;
+    text-align: center;
+    padding: 14px 18px;
+    border-radius: 5px;
+}
+@mixin age_active_btn {
+    width: 133px; height: 42px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 18px;
 }
