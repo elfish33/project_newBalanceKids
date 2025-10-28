@@ -7,6 +7,11 @@
     <meta name="keywords" content="뉴발란스, 뉴발란스 키즈, 키즈 신발, 애기 신발, 애기 옷">
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/main.css">
+    <!-- Fonts -->
+    <!--프리텐다드(v1.3.9) 웹글꼴 연결주소-->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -43,15 +48,15 @@
         <section class="shop_by_age">
             <h1><a href="#">SHOP BY AGE</a></h1>
             <div class="age_btn">
-                <a href="#" class="active_btn">그레이드(8-12세)</a>
-                <a href="#">스쿨키즈(4-10세)</a>
-                <a href="#">프리스쿨(3-7세)</a>
+                <button type="button" class="active_btn">그레이드(8-12세)</button>
+                <button type="button">스쿨키즈(4-10세)</button>
+                <button type="button">프리스쿨(3-7세)</button>
             </div>
             <div class="age_wrap">
                 <div class="model_img"><img src="./image/age_model_001.jpg" alt="그레이드(8-12세)"></div>
                 <div class="swiper" id="age_swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide product_card1"><!-- product card -->
+                        <div class="swiper-slide product_card card1"><!-- product card -->
                             <a href="#"><img src="./image/age_product_001.jpg" alt="골지 레이어드 티셔츠"></a><!-- product image -->
                             <div class="product_info">
                                 <h2 class="product_title">NBSC_골지 레이어드 티셔츠</h2>
@@ -63,7 +68,7 @@
                                 <div class="color_swatch beige" title="베이지"></div><!-- color swatch -->
                             </div>
                         </div>
-                        <div class="swiper-slide product_card2"><!-- product card -->
+                        <div class="swiper-slide product_card card2"><!-- product card -->
                             <a href="#"><img src="./image/age_product_002.jpg" alt="PZ530UL"></a><!-- product image -->
                             <div class="product_info">
                                 <h2 class="product_title">PZ530UL</h2>
@@ -75,7 +80,7 @@
                                 <div class="color_swatch brown" title="브라운"></div><!-- color swatch -->
                             </div>
                         </div>
-                        <div class="swiper-slide product_card3"><!-- product card -->
+                        <div class="swiper-slide product_card card3"><!-- product card -->
                             <a href="#"><img src="./image/age_product_003.jpg" alt="골지 레이어드 티셔츠"></a><!-- product image -->
                             <div class="product_info">
                                 <h2 class="product_title">NBSC_골지 레이어드 티셔츠</h2>
@@ -93,13 +98,12 @@
         </section>
         <section class="style_carousel">
             <div class="bnr_wrap">
-                <img src="" alt="스타일 카루셀">
-                <p>STYLE CAROUSEL</p>
+                <p>STYLE<br>CAROUSEL</p>
                 <div class="small_product">
-                    <button type="button" class="product1"><img src="./image/style_stories_product_003-04.jpg" alt=""></button>
-                    <button type="button" class="product2"><img src="./image/style_stories_product_003-01.jpg" alt=""></button>
-                    <button type="button" class="product3"><img src="./image/style_stories_product_003-02.jpg" alt=""></button>
-                    <button type="button" class="product4"><img src="./image/style_stories_product_003-03.jpg" alt=""></button>
+                    <a href="#" class="product1"><img src="./image/style_stories_product_003-04.jpg" alt=""></a>
+                    <a href="#" class="product2"><img src="./image/style_stories_product_003-01.jpg" alt=""></a>
+                    <a href="#" class="product3"><img src="./image/style_stories_product_003-02.jpg" alt=""></a>
+                    <a href="#" class="product4"><img src="./image/style_stories_product_003-03.jpg" alt=""></a>
                 </div>
             </div>
         </section>
@@ -120,17 +124,20 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide trend1">
                         <div class="trend_product">
-                            <img src="" alt="미니 레이서" class="trend_product_img"><!-- 상품 이미지 넣기! -->
+                            <img src="./image/best_001.png" alt="미니 레이서" class="trend_product_img"><!-- 상품 이미지 넣기! -->
                             <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심 상품 추가하기"></button>
                             <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                         </div>
-                        <h2 class="product_title"><a href="#">MINI RACER | 미니 레이서</a></h2>
-                        <p class="trend_type">리틀키즈 운동화</p>
-                        <p class="trend_price">119,000 ₩</p>
+                        <div class="trend_card_details">
+                            <h2 class="product_title"><a href="#">MINI RACER | 미니 레이서</a></h2>
+                            <p class="product_type">리틀키즈 운동화</p>
+                            <p class="product_price">119,000 ₩</p>
+
+                        </div>
                     </div>
                     <div class="swiper-slide trend2">
                         <div class="trend_product">
-                            <img src="" alt="스토미 팬다" class="trend_product_img"><!-- 상품 이미지 넣기! -->
+                            <img src="./image/best_002.png" alt="스토미 팬다" class="trend_product_img"><!-- 상품 이미지 넣기! -->
                             <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심 상품 추가하기"></button>
                             <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                         </div>
@@ -140,7 +147,7 @@
                     </div>
                     <div class="swiper-slide trend3">
                         <div class="trend_product">
-                            <img src="" alt="문바운스" class="trend_product_img"><!-- 상품 이미지 넣기! -->
+                            <img src="./image/best_003.png" alt="문바운스" class="trend_product_img"><!-- 상품 이미지 넣기! -->
                             <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심 상품 추가하기"></button>
                             <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                         </div>
@@ -150,7 +157,7 @@
                     </div>
                     <div class="swiper-slide trend4">
                         <div class="trend_product">
-                            <img src="" alt="미니 레이서" class="trend_product_img"><!-- 상품 이미지 넣기! -->
+                            <img src="./image/best_001.png" alt="미니 레이서" class="trend_product_img"><!-- 상품 이미지 넣기! -->
                             <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심 상품 추가하기"></button>
                             <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                         </div>
@@ -160,7 +167,7 @@
                     </div>
                     <div class="swiper-slide trend5">
                         <div class="trend_product">
-                            <img src="" alt="스토미 팬다" class="trend_product_img"><!-- 상품 이미지 넣기! -->
+                            <img src="./image/best_002.png" alt="스토미 팬다" class="trend_product_img"><!-- 상품 이미지 넣기! -->
                             <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심 상품 추가하기"></button>
                             <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                         </div>
@@ -174,7 +181,7 @@
         </section>
         <section class="playground_shoe">
             <div class="bnr_wrap">
-                <span>The ultimate<br>PLAYGROUND SHOE</span>
+                <span>The ultimate<br><em>playground shoe</em></span>
             </div>
         </section>
         <section class="style_stories">
@@ -183,7 +190,7 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide story1">
                         <div class="style_image">
-                            <a href="#"><img src="" alt="함께 걷는 순간, 스타일도 함께"></a><!-- 이미지 넣기! -->
+                            <a href="#"><img src="./image/style_story_001.png" alt="함께 걷는 순간, 스타일도 함께"></a><!-- 이미지 넣기! -->
                         </div>
                         <div class="style_card_content">
                             <h2 class="style_title">When I was young as you</h2>
@@ -200,7 +207,7 @@
                     </div>
                     <div class="swiper-slide story2">
                         <div class="style_image">
-                            <a href="#"><img src="" alt="아이의 겨울, 뉴발란스로 더 특별하게"></a><!-- 이미지 넣기! -->
+                            <a href="#"><img src="./image/style_story_002.png" alt="아이의 겨울, 뉴발란스로 더 특별하게"></a><!-- 이미지 넣기! -->
                         </div>
                         <div class="style_card_content">
                             <h2 class="style_title">530 Early Winter</h2>
@@ -216,7 +223,7 @@
                     </div>
                     <div class="swiper-slide story3">
                         <div class="style_image">
-                            <a href="#"><img src="" alt="가볍고 편안한 바람막이와 셋업!"></a><!-- 이미지 넣기! -->
+                            <a href="#"><img src="./image/style_story_003.png" alt="가볍고 편안한 바람막이와 셋업!"></a><!-- 이미지 넣기! -->
                         </div>
                         <div class="style_card_content">
                             <h2 class="style_title">Light Steps, Bold Days</h2>
@@ -233,7 +240,7 @@
                     </div>
                     <div class="swiper-slide story4">
                         <div class="style_image">
-                            <a href="#"><img src="" alt="함께 걷는 순간, 스타일도 함께"></a><!-- 이미지 넣기! -->
+                            <a href="#"><img src="./image/style_story_001.png" alt="함께 걷는 순간, 스타일도 함께"></a><!-- 이미지 넣기! -->
                         </div>
                         <div class="style_card_content">
                             <h2 class="style_title">When I was young as you</h2>
@@ -255,96 +262,111 @@
             <h1><a href="#">FIND THEIR STYLE</a></h1>
             <div class="find_their_style_wrap">
                 <div class="style_filters">
-                    <h2>Style Filters</h2>
                     <ul class="style_filters_list">
+                        <h2>Style Filters</h2>
                         <li><a href="#">스포티</a></li>
-                        <li><a href="#">백투스쿨</a></li><!-- active -->
+                        <li><a href="#" class="active_filter">백투스쿨</a></li><!-- active -->
                         <li><a href="#">스트릿</a></li>
                         <li><a href="#">아이코닉</a></li>
                         <li><a href="#">전체</a></li>
                     </ul>
                 </div>
-                <div class="style_cards">
-                    <div class="filter_card_img">
-                        <img src="./image/filter_img_001.png" alt="안감 코듀로이 일자팬츠">
-                        <button type="button"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
-                        <button type="button"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
+                <div class="card_content">
+                    <div class="style_card_row">
+                        <div class="style_cards">
+                            <div class="filter_card_img">
+                                <img src="./image/filter_img_001.png" alt="안감 코듀로이 일자팬츠">
+                                <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
+                                <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
+                            </div>
+                            <div class="filter_card_info">
+                                <h2><a href="#" class="product_title">안감 코듀로이 일자팬츠</a></h2>
+                                <p class="product_size">사이즈 : 120 ~ 160</p>
+                                <p class="product_price">79,900원</p>
+                            </div>
+                        </div>
+                        <div class="style_cards">
+                            <div class="filter_card_img">
+                                <img src="./image/filter_img_002.png" alt="IV9060EX">
+                                <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
+                                <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
+                            </div>
+                            <div class="filter_card_info">
+                                <h2><a href="#" class="product_title">IV9060EX</a></h2>
+                                <p class="product_size">사이즈 : 100 ~ 160</p>
+                                <p class="product_price">109,900원</p>
+                            </div>
+                        </div>
+                        <div class="style_cards">
+                            <div class="filter_card_img">
+                                <img src="./image/filter_img_003.png" alt="고학년 가방">
+                                <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
+                                <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
+                            </div>
+                            <div class="filter_card_info">
+                                <h2><a href="#" class="product_title">[CREW BAG] 고학년 가방</a></h2>
+                                <p class="product_size">사이즈 : FREE</p>
+                                <p class="product_price">139,000원</p>
+                            </div>
+                        </div>
                     </div>
-                    <div filter_card_info>
-                        <h2 class="product_title"><a href="#">안감 코듀로이 일자팬츠</a></h2>
-                        <p class="product_size">사이즈 : 120 ~ 160</p>
-                        <p class="product_price">79,900원</p>
+                    <div class="style_card_row">
+                        <div class="style_cards">
+                            <div class="filter_card_img">
+                                <img src="./image/filter_img_001.png" alt="중목 양말">
+                                <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
+                                <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
+                            </div>
+                            <div class="filter_card_info">
+                                <h2><a href="#" class="product_title">[3PCS] 중목 양말</a></h2>
+                                <p class="product_size">사이즈 : 160 ~ 220</p>
+                                <p class="product_price">71,900원</p>
+                            </div>
+                        </div>
+                        <div class="style_cards">
+                            <div class="filter_card_img">
+                                <img src="./image/filter_img_003.png" alt="고학년 가방">
+                                <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
+                                <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
+                            </div>
+                            <div class="filter_card_info">
+                                <h2><a href="#" class="product_title">[CREW BAG] 고학년 가방</a></h2>
+                                <p class="product_size">사이즈 : FREE</p>
+                                <p class="product_price">139,000원</p>
+                            </div>
+                        </div>
+                        <div class="style_cards">
+                            <div class="filter_card_img">
+                                <img src="./image/filter_img_001.png" alt="안감 코듀로이 일자팬츠">
+                                <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
+                                <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
+                            </div>
+                            <div class="filter_card_info">
+                                <h2><a href="#" class="product_title">안감 코듀로이 일자팬츠</a></h2>
+                                <p class="product_size">사이즈 : 120 ~ 160</p>
+                                <p class="product_price">79,900원</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="style_cards">
-                    <div class="filter_card_img">
-                        <img src="./image/filter_img_002.png" alt="IV9060EX">
-                        <button type="button"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
-                        <button type="button"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
-                    </div>
-                    <div filter_card_info>
-                        <h2 class="product_title"><a href="#">IV9060EX</a></h2>
-                        <p class="product_size">사이즈 : 100 ~ 160</p>
-                        <p class="product_price">109,900원</p>
-                    </div>
-                </div>
-                <div class="style_cards">
-                    <div class="filter_card_img">
-                        <img src="./image/filter_img_003.png" alt="고학년 가방">
-                        <button type="button"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
-                        <button type="button"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
-                    </div>
-                    <div filter_card_info>
-                        <h2 class="product_title"><a href="#">[CREW BAG] 고학년 가방</a></h2>
-                        <p class="product_size">사이즈 : FREE</p>
-                        <p class="product_price">139,000원</p>
-                    </div>
-                </div>
-                <div class="style_cards">
-                    <div class="filter_card_img">
-                        <img src="./image/filter_img_001.png" alt="중목 양말">
-                        <button type="button"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
-                        <button type="button"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
-                    </div>
-                    <div filter_card_info>
-                        <h2 class="product_title"><a href="#">[3PCS] 중목 양말</a></h2>
-                        <p class="product_size">사이즈 : 160 ~ 220</p>
-                        <p class="product_price">71,900원</p>
-                    </div>
-                </div>
-                <div class="style_cards">
-                    <div class="filter_card_img">
-                        <img src="./image/filter_img_003.png" alt="고학년 가방">
-                        <button type="button"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
-                        <button type="button"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
-                    </div>
-                    <div filter_card_info>
-                        <h2 class="product_title"><a href="#">[CREW BAG] 고학년 가방</a></h2>
-                        <p class="product_size">사이즈 : FREE</p>
-                        <p class="product_price">139,000원</p>
-                    </div>
-                </div>
-                <div class="style_cards">
-                    <div class="filter_card_img">
-                        <img src="./image/filter_img_001.png" alt="안감 코듀로이 일자팬츠">
-                        <button type="button"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
-                        <button type="button"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
-                    </div>
-                    <div filter_card_info>
-                        <h2 class="product_title"><a href="#">안감 코듀로이 일자팬츠</a></h2>
-                        <p class="product_size">사이즈 : 120 ~ 160</p>
-                        <p class="product_price">79,900원</p>
-                    </div>
-                </div>
-                <div class="find_photo"><img src="./image/find_model_photo.png" alt=""></div>
+                <div class="find_photo"><img src="./image/find_model_photo.png" alt="가장 멋진 스타일을 찾아보세요"></div>
             </div>
         </section>
         <section class="our_stores">
             <h1><a href="#">OUR STORES</a></h1>
             <div class="stores_wrap">
-                <div class="store store1"><img src="./image/store_img_001.png" alt="더현대 서울 스토어"></div>
-                <div class="store store2"><img src="./image/store_img_002.png" alt="성수 플래그십 스토어"></div>
-                <div class="store store3"><img src="./image/store_img_003.png" alt="홍대 플래그십스토어"></div>
+                <div class="store store1">
+                    <h2>THE HYUNDAI SEOUL</h2>
+                    
+                </div>
+                <div class="store store2">
+                    <h2>성수 플래그십 스토어</h2>
+                    
+                </div>
+                <div class="store store3">
+                    <h2>홍대 플래그십스토어</h2>
+                    
+                </div>
             </div>
         </section>
     </main>
@@ -408,8 +430,15 @@
                     <a href="#"><img src="./image/sns_nbrc_icon.png" alt="NBRC 바로가기"></a>
                     <a href="#"><img src="./image/sns_fb_icon.png" alt="페이스북 바로가기"></a>
                     <a href="#"><img src="./image/sns_yt_icon.png" alt="유투브 바로가기"></a>
-                    <a href="#"><img src="./image/sns_naverblog_icon.png" alt="NB 라이프스타일 네이버 블로그 바로가기">NB LIFE STYLE</a>
-                    <a href="#"><img src="./image/sns_naverblog_icon.png" alt="NB 키즈 네이버 블로그 바로가기">NB KIDS</a>
+                    <a href="#" class="naver_blog">
+                            <img src="./image/sns_naverblog_icon.png" alt="NB 라이프스타일 네이버 블로그 바로가기">
+                            <span>NB LIFE STYLE</span>
+                        
+                    </a>
+                    <a href="#" class="naver_blog">
+                            <img src="./image/sns_naverblog_icon.png" alt="NB 키즈 네이버 블로그 바로가기">
+                            <span>NB KIDS</span>
+                    </a>
                 </div>
                 <div class="company_info">
                     <p><a>개인정보 처리방침</a> / 이용약관 / ㈜이랜드월드패션사업부 / <address>서울특별시 강서구 마곡동로 146(마곡동)</address></p>
@@ -423,17 +452,18 @@
                     <span>통신판매업신고 : 2025-서울강서-2203</span>
                 </div>
                 <div class="info_security">
-                    <span>개인정보보호책임자 : 조동주</span>
-                    <span><a href="#">사업자정보조회</a></span>
+                    <span>개인정보보호책임자 : 조동주<a href="#">사업자정보조회</a></span>
                     <span>온라인디지털콘텐츠산업발전법에 의한 <a href="#">콘텐츠보호안내 자세히보기</a></span>
                 </div>
-                <div class="certification_img"><a href="#"><img src="./image/footer_ISMS.png" alt="기업의 정보보호 관리체계(Information Security Management System) 인증 마크"></a></div>
-                <div class="certification_info">
-                    <p>[인증범위] 이랜드월드 온라인 서비스 운영</p>
-                    <p>[유효기간] 2023.05.03~2026.05.02</p>
+                <div class="certification">
+                    <div class="certification_img"><a href="#"><img src="./image/footer_ISMS.png" alt="기업의 정보보호 관리체계(Information Security Management System) 인증 마크"></a></div>
+                    <div class="certification_info">
+                        <p>[인증범위] 이랜드월드 온라인 서비스 운영</p>
+                        <p>[유효기간] 2023.05.03~2026.05.02</p>
+                    </div>
                 </div>
+                <p class="copyright">Copyright 2018. New Balance</p>
             </div>
-            <p class="copyright">Copyright 2018. New Balance</p>
         </div>
     </footer>
 </body>

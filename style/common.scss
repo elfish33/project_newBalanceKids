@@ -1,9 +1,19 @@
 //변수 
-
+//Font Weight
 $bold: 700;
+$semiBold: 600;
+$medium: 500;
+
+//Colors
+$red: #CF0A2C;
 
 
 //mixin
+@mixin margin-auto {
+    margin: 0 auto;
+    width: 1500px;
+}
+
 @mixin flex-row {
     display: flex;
     flex-flow: row nowrap;
@@ -18,41 +28,61 @@ $bold: 700;
     font-size: 3rem; /* 48px */
     font-weight: 700; /* bold */
     line-height: 100%;
-    letter-spacing: -2%;
+    letter-spacing: -0.02em;
 }
 
 @mixin product_title {
     font-weight: 700; /* bold */
     line-height: 100%;
-    letter-spacing: -2%;
+    letter-spacing: -0.02em;
     font-size: 1.125rem;/* 18px */
 }
 @mixin product_price {
     font-weight: 500;
     line-height: 100%;
-    letter-spacing: -2%;
+    letter-spacing: -0.02em;
 }
 @mixin product_size {
     line-height: 100%;
-    letter-spacing: -2%;
+    letter-spacing: -0.02em;
     font-size: 0.75rem; /* 12px */
     color: #7D7C7C;
 }
-@mixin color_swatch {
-    width: 18px; height: 18px;
-    border-radius: 50%;
+
+@mixin product_type {
+    color: #5F5F5F;
 }
+
 @mixin age_btn {
-    width: 133px; height: 42px;
+    width: 143px; height: 42px;
     background-color: #F5F5F5;
     text-align: center;
     padding: 14px 18px;
     border-radius: 5px;
 }
 @mixin age_active_btn {
-    width: 133px; height: 42px;
+    width: 143px; height: 42px;
     background-color: #000000;
     color: #ffffff;
     text-align: center;
     padding: 14px 18px;
+}
+@mixin swatch {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+}
+
+@mixin background_img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin footer_text {
+    color: #fff;
+
+}
+@mixin footer_title {
+    font-weight: $bold;
+    font-size: 1.25rem;
 }
