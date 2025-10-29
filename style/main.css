@@ -26,12 +26,22 @@ body header .left_gnb { /* logo */ }
 body header .left_gnb a {
   font-weight: 700;
 }
+body header .left_gnb a:hover {
+  color: #CF0A2C;
+}
 body header .right_gnb {
   width: 180px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+}
+body header .right_gnb a:hover {
+  transform: scale(1.5);
+  transition: linear;
+}
+body header .right_gnb a:hover::after {
+  border-bottom: 0.7px solid #CF0A2C;
 }
 body #main_bnr_swiper .swiper-wrapper {
   width: 100%;
@@ -120,12 +130,9 @@ body .shop_by_age .age_wrap #age_swiper .swiper-wrapper .product_card {
 body .shop_by_age .age_wrap #age_swiper .swiper-wrapper .product_card a {
   display: block;
   overflow: hidden;
-  width: 346px;
-  height: 460px; /* не сработало? заработало после display: inline-block; выше */
+  /* так как это свайпер задавать ширину и высоту не надо */
 }
 body .shop_by_age .age_wrap #age_swiper .swiper-wrapper .product_card a img {
-  object-fit: cover;
-  height: 100%;
   width: 100%;
 }
 body .shop_by_age .age_wrap #age_swiper .swiper-wrapper .product_card .product_info {
@@ -201,10 +208,14 @@ body .style_carousel .bnr_wrap .small_product {
 }
 body .style_carousel .bnr_wrap .small_product a {
   border: 1px solid #A0A0A0;
+  overflow: hidden;
   border-radius: 5px;
   display: inline-block;
   width: 100px;
   height: 100px;
+}
+body .style_carousel .bnr_wrap .small_product a:hover {
+  border: 1px solid #CF0A2C;
 }
 body .style_carousel .bnr_wrap .small_product .product1 img {
   width: 100%;
@@ -244,15 +255,19 @@ body .trending .filter_menu .left_filter {
   gap: 15px;
   font-weight: 600;
 }
-body .trending .filter_menu .left_filter .active {
+body .trending .filter_menu .left_filter .filter_title:hover {
+  color: #CF0A2C;
+}
+body .trending .filter_menu .right_filter a:hover {
   color: #CF0A2C;
 }
 body .trending #trend_swiper {
+  /* display: flex;
+  gap: 20px; */
   margin: 0;
 }
 body .trending #trend_swiper .swiper-wrapper .swiper-slide .trend_product {
-  width: 230px;
-  height: 230px;
+  /* width: 230px; height: 230px; */
   position: relative;
 }
 body .trending #trend_swiper .swiper-wrapper .swiper-slide .trend_product .trend_product_img {
@@ -271,8 +286,7 @@ body .trending #trend_swiper .swiper-wrapper .swiper-slide .trend_product .cart_
   line-height: 30px;
 }
 body .trending #trend_swiper .swiper-wrapper .swiper-slide .trend_card_details {
-  width: 320px;
-  height: 111px;
+  /* width: 320px; height: 111px; */
   padding: 20px;
   display: flex;
   flex-flow: column nowrap;
@@ -291,6 +305,12 @@ body .trending #trend_swiper .swiper-wrapper .swiper-slide .trend_card_details .
   font-weight: 500;
   line-height: 100%;
   letter-spacing: -0.02em;
+}
+body .trending #trend_swiper .swiper-scrollbar-horizontal {
+  margin-top: 30px;
+}
+body .trending #trend_swiper .swiper-scrollbar-drag {
+  background-color: #BCB9B9;
 }
 body .playground_shoe {
   margin: 0 auto;
@@ -355,6 +375,10 @@ body .style_stories #stylestory_swiper .swiper-wrapper .swiper-slide .style_imag
   height: 510px;
   overflow: hidden;
   display: inline-block;
+  transition: transform 0.3 ease;
+}
+body .style_stories #stylestory_swiper .swiper-wrapper .swiper-slide .style_image a:hover {
+  transform: scale(1.02);
 }
 body .style_stories #stylestory_swiper .swiper-wrapper .swiper-slide .style_image a img {
   width: 100%;
@@ -400,6 +424,12 @@ body .style_stories #stylestory_swiper .swiper-wrapper .swiper-slide .style_thum
   display: inline-block;
   width: 100px;
   height: 100px;
+  border: 1px solid #A0A0A0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+body .style_stories #stylestory_swiper .swiper-wrapper .swiper-slide .style_thumbnail .style_small:hover {
+  border: 1px solid #CF0A2C;
 }
 body .style_stories #stylestory_swiper .swiper-wrapper .swiper-slide .style_thumbnail .style_small img {
   width: 100%;
@@ -440,7 +470,7 @@ body .find_their_style .find_their_style_wrap .style_filters .style_filters_list
 body .find_their_style .find_their_style_wrap .style_filters .style_filters_list li a {
   font-weight: 500;
 }
-body .find_their_style .find_their_style_wrap .style_filters .style_filters_list li .active_filter {
+body .find_their_style .find_their_style_wrap .style_filters .style_filters_list li a:hover {
   color: #CF0A2C;
 }
 body .find_their_style .find_their_style_wrap .card_content {
@@ -460,6 +490,10 @@ body .find_their_style .find_their_style_wrap .card_content .style_card_row .sty
   position: relative;
   width: 220px;
   height: 220px;
+  transition: transform 0.3 ease;
+}
+body .find_their_style .find_their_style_wrap .card_content .style_card_row .style_cards .filter_card_img:hover {
+  transform: scale(1.01);
 }
 body .find_their_style .find_their_style_wrap .card_content .style_card_row .style_cards .filter_card_img img {
   width: 100%;
@@ -490,6 +524,9 @@ body .find_their_style .find_their_style_wrap .card_content .style_card_row .sty
   font-weight: 700; /* bold */
   line-height: 100%;
   letter-spacing: -0.02em;
+}
+body .find_their_style .find_their_style_wrap .card_content .style_card_row .style_cards .filter_card_info h2 .product_title:hover {
+  color: #CF0A2C;
 }
 body .find_their_style .find_their_style_wrap .card_content .style_card_row .style_cards .filter_card_info .product_size {
   font-size: 1rem;
