@@ -1,0 +1,101 @@
+@use './common.scss' as *;
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    main {
+        @include margin-auto;
+        .trending_title_filter {
+            h1 {@include title_h1;}
+            .product_filters {
+                @include flex-row;
+                gap: 15px;
+                padding: 30px 0;
+                button {@include filter_btn;}
+                .active_filter {@include filter_btn_active}
+            }
+            p {
+                font-size: 1.125rem;
+                margin-bottom: 30px;
+                em {font-weight: $bold;}
+            }
+        }
+        .product_wrap {
+            @include flex-col;
+            gap: 30px;
+            .wrap_row {
+                @include flex-row;
+                gap: 30px;
+                .model_ad {
+                    width: 350px; height: 560px;
+                    img {width: 100%;}
+                }
+                .product_card {
+                    @include flex-col;
+                    gap: 10px;
+                    .product_img {
+                        width: 350px; height: 350px;
+                        a {
+                            width: 100%; height: 100%;
+                            display: inline-block;
+                            @include background_img;
+                        }
+                        .card1 {background-image: url(../image/product_list_001.png);}
+                        .card2 {background-image: url(../image/product_list_002.png);}
+                        .card3 {background-image: url(../image/product_list_003.png);}
+                        .card4 {background-image: url(../image/product_list_004.png);}
+                        .card5 {background-image: url(../image/product_list_005.png);}
+                        .card6 {background-image: url(../image/product_list_006.png);}
+                        .card7 {background-image: url(../image/product_list_001.png);}
+                        .card8 {background-image: url(../image/product_list_001.png);}
+                        .card9 {background-image: url(../image/product_list_002.png);}
+                        .card10 {background-image: url(../image/product_list_003.png);}
+                        .card11 {background-image: url(../image/product_list_004.png);}
+                        .card12 {background-image: url(../image/product_list_005.png);}
+                        .card13 {background-image: url(../image/product_list_006.png);}
+                        .card14 {background-image: url(../image/product_list_001.png);}
+                    }
+                    .product_info {
+                        @include flex-col;
+                        gap: 10px;
+                        .title_review {
+                            @include flex-row;
+                            justify-content: space-between;
+                            .product_title {@include product_title;}
+                            .review_icon {
+                                img {}
+                                .review_small {@include product_review;}
+                            }
+                        }
+                        .type_price {
+                            @include flex-col;
+                            gap: 10px;
+                            .product_type {@include product_type;}
+                            .product_price {@include product_price;}
+                        }
+                        
+                    }
+                    .product_color {
+                        @include flex-row;
+                            gap: 8px;
+                            .color_swatch {@include swatch}
+                            .black {background-color: #1C1C1C;}
+                            .beige {background-color: #E6E7E1;}
+                            .gray {background-color: #616773;}
+                            .brown {background-color: #A09488;}
+                            .darkBlue {background-color: #3D4F73;}
+                    }
+                }
+            }
+            .row1 {
+                .model_ad {
+                    img {width: 100%;}
+                }
+                .card1 {}
+            }
+            .row2 {}
+            .row3 {}
+            .row4 {}
+        }
+    }
+}

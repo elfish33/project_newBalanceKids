@@ -53,6 +53,12 @@ $red: #CF0A2C;
     color: #5F5F5F;
 }
 
+@mixin product_review {
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    font-size: 0.688rem;
+}
+
 @mixin age_btn {
     width: 143px; height: 42px;
     background-color: #F5F5F5;
@@ -85,4 +91,19 @@ $red: #CF0A2C;
 @mixin footer_title {
     font-weight: $bold;
     font-size: 1.25rem;
+}
+
+@mixin filter_btn {
+    width: max-content; height: 33px;
+    background-color: #F5F5F5;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+@mixin filter_btn_active {
+    width: 74px; height: 33px;
+    background-color: #000000;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px;
 }
