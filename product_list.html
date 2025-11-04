@@ -24,20 +24,61 @@
 <body>
     <header>
         <div class="left_gnb">
-            <h1><a href="#"><img src="./image/nb_logo.png" alt="뉴발란스 로고"></a></h1>
+            <h1><a href="./index.html"><img src="./image/nb_logo.png" alt="뉴발란스 로고"></a></h1>
             <a href="#">Men</a>
             <a href="#">Women</a>
-            <a href="#">Kids</a>
+            <a href="./product_list.html">Kids</a>
             <a href="#">Calendar</a>
         </div>
         <div class="right_gnb">
-            <a href="#"><img src="./image/search_icon.png" alt="검색하기"></a>
-            <a href="#"><img src="./image/profile_icon.png" alt="마이페이지"></a>
-            <a href="#"><img src="./image/cart_icon.png" alt="장바구니"></a>
-            <a href="#"><img src="./image/sandwich_menu_icon.png" alt="메뉴 보기"></a>
+            <!-- search -->
+            <a href="#">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_217_6616" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="26">
+                    <rect width="26" height="26" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_217_6616)">
+                    <path d="M21.2333 22.75L14.4083 15.925C13.8667 16.3583 13.2438 16.7014 12.5396 16.9542C11.8354 17.2069 11.0861 17.3333 10.2917 17.3333C8.32361 17.3333 6.65799 16.6517 5.29479 15.2885C3.9316 13.9253 3.25 12.2597 3.25 10.2917C3.25 8.32361 3.9316 6.65799 5.29479 5.29479C6.65799 3.9316 8.32361 3.25 10.2917 3.25C12.2597 3.25 13.9253 3.9316 15.2885 5.29479C16.6517 6.65799 17.3333 8.32361 17.3333 10.2917C17.3333 11.0861 17.2069 11.8354 16.9542 12.5396C16.7014 13.2438 16.3583 13.8667 15.925 14.4083L22.75 21.2333L21.2333 22.75ZM10.2917 15.1667C11.6458 15.1667 12.7969 14.6927 13.7448 13.7448C14.6927 12.7969 15.1667 11.6458 15.1667 10.2917C15.1667 8.9375 14.6927 7.78646 13.7448 6.83854C12.7969 5.89062 11.6458 5.41667 10.2917 5.41667C8.9375 5.41667 7.78646 5.89062 6.83854 6.83854C5.89062 7.78646 5.41667 8.9375 5.41667 10.2917C5.41667 11.6458 5.89062 12.7969 6.83854 13.7448C7.78646 14.6927 8.9375 15.1667 10.2917 15.1667Z" fill="#1C1B1F"/>
+                    </g>
+                </svg>
+            </a>
+            <!-- profile -->
+            <a href="#">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_217_6619" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="26">
+                    <rect width="26" height="26" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_217_6619)">
+                    <path d="M6.33752 18.525C7.25835 17.8208 8.28752 17.2656 9.42502 16.8594C10.5625 16.4531 11.7542 16.25 13 16.25C14.2459 16.25 15.4375 16.4531 16.575 16.8594C17.7125 17.2656 18.7417 17.8208 19.6625 18.525C20.2945 17.7847 20.7865 16.9451 21.1386 16.0062C21.4906 15.0674 21.6667 14.0653 21.6667 13C21.6667 10.5986 20.8226 8.55382 19.1344 6.86562C17.4462 5.17743 15.4014 4.33333 13 4.33333C10.5986 4.33333 8.55384 5.17743 6.86564 6.86562C5.17745 8.55382 4.33335 10.5986 4.33335 13C4.33335 14.0653 4.5094 15.0674 4.86148 16.0062C5.21356 16.9451 5.70558 17.7847 6.33752 18.525ZM13 14.0833C11.9347 14.0833 11.0365 13.7177 10.3052 12.9865C9.57398 12.2552 9.20835 11.3569 9.20835 10.2917C9.20835 9.22639 9.57398 8.32812 10.3052 7.59687C11.0365 6.86562 11.9347 6.5 13 6.5C14.0653 6.5 14.9636 6.86562 15.6948 7.59687C16.4261 8.32812 16.7917 9.22639 16.7917 10.2917C16.7917 11.3569 16.4261 12.2552 15.6948 12.9865C14.9636 13.7177 14.0653 14.0833 13 14.0833ZM13 23.8333C11.5014 23.8333 10.0931 23.549 8.77502 22.9802C7.45696 22.4115 6.31044 21.6396 5.33544 20.6646C4.36044 19.6896 3.58856 18.5431 3.01981 17.225C2.45106 15.9069 2.16669 14.4986 2.16669 13C2.16669 11.5014 2.45106 10.0931 3.01981 8.775C3.58856 7.45694 4.36044 6.31041 5.33544 5.33541C6.31044 4.36041 7.45696 3.58854 8.77502 3.01979C10.0931 2.45104 11.5014 2.16666 13 2.16666C14.4986 2.16666 15.907 2.45104 17.225 3.01979C18.5431 3.58854 19.6896 4.36041 20.6646 5.33541C21.6396 6.31041 22.4115 7.45694 22.9802 8.775C23.549 10.0931 23.8334 11.5014 23.8334 13C23.8334 14.4986 23.549 15.9069 22.9802 17.225C22.4115 18.5431 21.6396 19.6896 20.6646 20.6646C19.6896 21.6396 18.5431 22.4115 17.225 22.9802C15.907 23.549 14.4986 23.8333 13 23.8333ZM13 21.6667C13.957 21.6667 14.8597 21.5267 15.7084 21.2469C16.557 20.967 17.3334 20.5653 18.0375 20.0417C17.3334 19.5181 16.557 19.1163 15.7084 18.8365C14.8597 18.5566 13.957 18.4167 13 18.4167C12.0431 18.4167 11.1403 18.5566 10.2917 18.8365C9.44308 19.1163 8.66669 19.5181 7.96252 20.0417C8.66669 20.5653 9.44308 20.967 10.2917 21.2469C11.1403 21.5267 12.0431 21.6667 13 21.6667ZM13 11.9167C13.4695 11.9167 13.8577 11.7632 14.1646 11.4562C14.4715 11.1493 14.625 10.7611 14.625 10.2917C14.625 9.82222 14.4715 9.43402 14.1646 9.12708C13.8577 8.82014 13.4695 8.66666 13 8.66666C12.5306 8.66666 12.1424 8.82014 11.8354 9.12708C11.5285 9.43402 11.375 9.82222 11.375 10.2917C11.375 10.7611 11.5285 11.1493 11.8354 11.4562C12.1424 11.7632 12.5306 11.9167 13 11.9167Z" fill="#1C1B1F"/>
+                    </g>
+                </svg>
+            </a>
+            <!-- cart -->
+            <a href="#">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="26" height="26" fill="url(#pattern0_217_6622)"/>
+                    <defs>
+                    <pattern id="pattern0_217_6622" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_217_6622" transform="scale(0.0277778)"/>
+                    </pattern>
+                    <image id="image0_217_6622" width="36" height="36" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANUSURBVFhH7ZZLSBVRGMe/M75SNB8YZYrviErDjWS6MMGiB9KqVhZhESUEQVAEURuhoCAJchktCmqRm2iRBiL4ClJ6ECaF5qsMqXxAauqc/t+5Z9T0znVmuhda+IMfZ77vXma+e853zxlBIeJDSmlyVPjcKUlUgYfkkaD1UsoRfNQuBdUPDEQ8KqPmOd+3FwlJQb3pxeeEFDVchE6tQErqFgZVZfW3duiUIugF9aaX1OGmZ3UYEMzYtCGoMnOg7YlOBbegvoySCyTplg4dwUVJ09iVM9zylmNDZd1zFPJUz8DfsLMoOv68NGUNrl0hhFgnDFmrQ08F1cHHMAnehNdh1J6oxNt8c1y7Rggq68so3s3Xbgs6A7k/HsB8eAVegwWHY5J/YvSOSQd5cFMQz8gN+BpWQV4uhaQjclN4ZJwOPYGtII9HNwWdhPHwKpzlhMXIxjEslQjXoTckqR9kV1CmHyvhOOxeklOmfGvcYBL9wrVnBImvPNoV1OfHnZBn6OOS3IJdMxMxGP8ByT/Udh/Cjk8TsElFRJthIeyEQ5xYzuX4zNzT8ak7dOgKPEySIbdlf27rCVTQG1igIqJqeBfuhS84sZy+jNIEkrOYPZGsU47BMfIwe7CVW8JxUx/XI8+SX7L6m8dMKarUr3WFHA0jeVEHjgvqgehb+qQiG3IGW5+2T43XzjuuSY4aZBzIGGz7ohMBe2jpkjHRcMp3GZjOtML9SUbEHdx+i06tAMv0TEZQdU5v64BOKdwU5IomKg3PTJsvl4ZZ8Wpm8hgOrLj8yNgGSbLNNM363KGOd/qrjuCCeEe2IxYmwOVLzpsb58NUtAjfy9E6Ou2h5fCewWfXCRX54CJ4+n/ARE4Ek0AztB3y5+x7aC17EeRcl4r+JqQzVK5Hhos75LtUexTTqEdPeCnIerC1i1/So5Vv0GNQsVuyCDgJ52Eq5H7h7+6D/AbAB6y/l7SQLRm/1fE/7CUchnycMPchv360wGlOeMVtQVb/WOcZNj9VQIqKiJ7r0TNuC+KlYazGHYX3fJcKvwdvMPDXQ7xU3yGfO9xLFtmQe4nPObud33EP2WHX1F4JWVOHnLWCVuO/KyjQ+xDvL/ymGAy2Qt7B7Z63QKCCQsGqBa0RGKI//OXvr2+aFBEAAAAASUVORK5CYII="/>
+                    </defs>
+                </svg>
+            </a>
+            <!-- menu -->
+            <a href="#">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_217_6623" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="26" height="26">
+                    <rect width="26" height="26" fill="#D9D9D9"/>
+                    </mask>
+                    <g mask="url(#mask0_217_6623)">
+                    <path d="M3.25 7.58333V5.41666H22.75V7.58333H3.25ZM3.25 20.5833V18.4167H22.75V20.5833H3.25ZM3.25 14.0833V11.9167H22.75V14.0833H3.25Z" fill="#1C1B1F"/>
+                    </g>
+                </svg>
+            </a>
         </div>
     </header>
-    <main>
+    <main class="page-list">
         <div class="trending_title_filter">
             <h1>WHAT'S TRENDING</h1>
             <div class="product_filters">
@@ -63,7 +104,16 @@
                         <div class="title_review">
                             <h2 class="product_title">IV9060EX</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg>
+                                <span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -84,7 +134,16 @@
                         <div class="title_review">
                             <h2 class="product_title">골지비니</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg>
+                                <span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -105,7 +164,15 @@
                         <div class="title_review">
                             <h2 class="product_title">일러스트 기모 맨투맨</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg><span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -128,7 +195,15 @@
                         <div class="title_review">
                             <h2 class="product_title">플랩 미니미백팩</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg><span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -149,7 +224,15 @@
                         <div class="title_review">
                             <h2 class="product_title">일러스트 기모 맨투맨</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg><span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -170,7 +253,15 @@
                         <div class="title_review">
                             <h2 class="product_title">일러스트 기모 맨투맨</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg><span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -191,7 +282,15 @@
                         <div class="title_review">
                             <h2 class="product_title">IV9060EX</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg><span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -214,7 +313,15 @@
                         <div class="title_review">
                             <h2 class="product_title">IV9060EX</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg><span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -235,7 +342,15 @@
                         <div class="title_review">
                             <h2 class="product_title">골지비니</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg><span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -256,7 +371,15 @@
                         <div class="title_review">
                             <h2 class="product_title">일러스트 기모 맨투맨</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg><span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -280,7 +403,15 @@
                         <div class="title_review">
                             <h2 class="product_title">플랩 미니미백팩</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg><span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -301,7 +432,15 @@
                         <div class="title_review">
                             <h2 class="product_title">일러스트 기모 맨투맨</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg><span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -322,7 +461,15 @@
                         <div class="title_review">
                             <h2 class="product_title">일러스트 기모 맨투맨</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg><span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -343,7 +490,15 @@
                         <div class="title_review">
                             <h2 class="product_title">IV9060EX</h2>
                             <div class="review_icon">
-                                <img src="./image/star.png" alt="리뷰별"><span class="review_small">리뷰(5)</span>
+                                <!-- star svg -->
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <mask id="mask0_147_1198" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="14" height="14">
+                                    <rect width="14" height="14" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_147_1198)">
+                                    <path d="M3.39792 12.25L4.34584 8.1521L1.16667 5.39585L5.36667 5.03127L7.00001 1.16669L8.63334 5.03127L12.8333 5.39585L9.65417 8.1521L10.6021 12.25L7.00001 10.0771L3.39792 12.25Z" fill="#CF0A2C"/>
+                                    </g>
+                                </svg><span class="review_small">리뷰(5)</span>
                             </div>
                         </div>
                         <div class="type_price">
@@ -356,6 +511,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="pagination">
+                <a href="#" class="pagination_active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
             </div>
         </section>
     </main>

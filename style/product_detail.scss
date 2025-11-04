@@ -1,0 +1,212 @@
+@use './common.scss' as *;
+body {
+    .page-details {
+        @include margin-auto;
+        @include width1500;
+        @include flex-row;
+
+        .product_left_wrap {
+            width: 890px;
+            .product_image_container {
+                @include flex-row;
+                justify-content: center;
+                align-items: flex-start; gap: 20px;
+                .product_thumbnail {
+                    @include flex-col;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 5px;
+                    .thumbnail_img {
+                        @include background_img;
+                        width: 100px; height: 100px;
+                    }
+                    .thumbnail1 {background-image: url(../image/product_thum_001.png);}
+                    .thumbnail2 {background-image: url(../image/product_thum_002.png);}
+                    .thumbnail3 {background-image: url(../image/product_thum_003.png);}
+                    .thumbnail4 {background-image: url(../image/product_thum_004.png);}
+                    .thumbnail5 {background-image: url(../image/product_thum_005.png);}
+                }
+                .product_big_img {
+                    width: 580px; height: 580px;
+                    @include background_img;
+                    .product_main_img {
+                        width: 100%; height: 100%;
+                        background-image: url(../image/product_thum_001.png);}
+                }
+            }
+            .product_info_container {
+                .sticky_menu {
+                    @include flex-row;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+                    width: 100%; height: 52px;
+                    position: sticky; top: 100px; /* надо перепроверить как это работает возможно проблема в родителе */
+                    a {
+                        text-align: center;
+                        padding: 10px 0;
+                        width: 200px;
+                        font-size: $size14;
+                        &:hover {border-bottom: 2px solid black;}
+                    }
+                    .product_link {}
+                    .size_link {}
+                    .review_link {}
+                    .recommend_link {}
+                }
+            }
+        }
+        .product_right_wrap {
+            width: calc(100% - (890px + 30px));
+            .product_details_container {
+                @include flex-col;
+                gap: 20px;
+                .path {
+                    @include flex-row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 5px;
+                    a {
+                        font-size: $size13;
+                        font-weight: $light;
+                        color: #7E7E7E;
+                        position: relative;
+                        &:nth-child(2) {padding: 0 10px;}
+                        &:nth-child(2)::before {
+                            display: block;
+                            position:  absolute;
+                            content: '>';
+                            top: 0;
+                            left: 0; right: auto;
+                            color: #7E7E7E;
+                            font-size: $size13;
+                            font-weight: $light;
+                        }
+                        &:nth-child(2)::after {
+                            display: block;
+                            position:  absolute;
+                            content: '>';
+                            top: 0;
+                            right: 0; left: auto;
+                            color: #7E7E7E;
+                            font-size: $size13;
+                            font-weight: $light;
+                        }
+                    }
+                    
+                    
+                }
+                .membership_info {
+                    @include flex-row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 6px;
+                    .membership_icon {width: 22px; height: 10px;}
+                    .membership_text {
+                        font-size: $size11;
+                        font-weight: $light;
+                        color: #696969;
+                    }
+                    .popup_icon {width: 14px; height: 14px;}
+                }
+                .product_main_info {
+                    @include flex-row;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 25px;
+                    .title_review {
+                        @include flex-row;
+                        align-items: center;
+                        gap: 20px;
+                        .product_name {
+                            font-size: $size28;
+                            font-weight: $bold;
+                        }
+                        a {
+                            .review_box {
+                                @include flex-row;
+                                justify-content: flex-start;
+                                align-items: center;
+                                gap: 3px;
+                                .review_stars {
+                                    display: flex; gap: 2px;
+                                    svg {width: 14px; height: 14px;}
+                                }
+                                .review_number {
+                                    font-weight: $medium;
+                                    font-size: $size10;
+                                }
+                            }
+                        }
+                    }
+                    .like_share_btn {
+                        .like_btn {
+                            svg {width: 24px; height: 24px;}
+                        }
+                        .share_btn {
+                            svg {width: 24px; height: 24px;}
+                        }
+                    }
+                }
+                .product_main_price {@include product_title;}
+                #orderFrm {
+                    @include flex-col;
+                    gap: 20px;
+                    .color_select {
+                        @include flex-col;
+                        gap: 20px;
+                        .section_name {@include section_name;}
+                        .color_btn_box {
+                            @include flex-row;
+                            gap: 15px;
+                            .color_btn {
+                                width: 62px; height: 62px;
+                                border-radius: 5px;
+                                @include background_img;
+                            }
+                            .color_btn1 {background-image: url(../image/detail_small_001.png);}
+                            .color_btn2 {background-image: url(../image/detail_small_002.png);}
+                            .color_btn3 {background-image: url(../image/detail_small_003.png);}
+                        }
+                    }
+                    .size_select {
+                        @include flex-col;
+                        gap: 20px;
+                        .section_name {@include section_name;}
+                        .size_options {
+                            @include flex-row;
+                            gap: 15px;
+                            justify-content: flex-start;
+                            align-items: center;
+                            .size_btn {@include size_btn_unact;}
+                            .unavailable_size {@include size_btn_unav;}
+                            .active_size {@include size_btn_selected;}
+                        }
+                    }
+                    .linked_product_box {
+                        @include flex-col;
+                        gap: 20px;
+                        .section_name {@include section_name;}
+                        .linked_products {
+                            @include flex-row;
+                            gap: 15px;
+                            a {
+                                @include background_img;
+                                border-radius: 5px;
+                                width: 62px; height: 62px;
+                                display: inline-block;
+                            }
+                            .linked_product1 {background-image: url(../image/linked_001.png);}
+                            .linked_product2 {background-image: url(../image/linked_002.png);}
+                            .linked_product3 {background-image: url(../image/linked_003.png);}
+                        }
+
+                    }
+                    .pickup_option {}
+                    .total_price_box {}
+                }
+                .order_info {}
+            }
+        }
+    }
+}

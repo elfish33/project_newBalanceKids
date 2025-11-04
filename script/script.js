@@ -5,6 +5,7 @@ const mainBnrSwiper =  new Swiper ('#main_bnr_swiper', {
 
 const shopByAgeSwiper = new Swiper ('#age_swiper',{
     slidesPerView: 2.5,
+    spaceBetween: 15,
 })
 
 const trendSwiper = new Swiper ('.trend_swiper_wrap #trend_swiper', {
@@ -17,6 +18,6 @@ const trendSwiper = new Swiper ('.trend_swiper_wrap #trend_swiper', {
 })
 
 const styleSwiper = new Swiper ('#stylestory_swiper',{
-    slidesPerView: 3.3,
+    slidesPerView: 3.1,
     spaceBetween: 20,
 })

@@ -3,14 +3,26 @@
 $bold: 700;
 $semiBold: 600;
 $medium: 500;
+$light: 300;
 
 //Colors
 $red: #CF0A2C;
+
+//Font Sizes
+$size14: 0.875rem;
+$size13: 0.813rem;
+$size12: 0.75rem;
+$size11: 0.688rem;
+$size10: 0.625rem;
+$size28: 1.75rem;
 
 
 //mixin
 @mixin margin-auto {
     margin: 0 auto;
+}
+
+@mixin width1500 {
     width: 1500px;
 }
 
@@ -48,6 +60,11 @@ $red: #CF0A2C;
     font-size: 0.75rem; /* 12px */
     color: #7D7C7C;
 }
+@mixin section_name {
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    font-size: 0.875rem; /* 14px */
+}
 
 @mixin product_type {
     color: #5F5F5F;
@@ -59,6 +76,7 @@ $red: #CF0A2C;
     font-size: 0.688rem;
 }
 
+//Buttons
 @mixin age_btn {
     width: 143px; height: 42px;
     background-color: #F5F5F5;
@@ -77,22 +95,6 @@ $red: #CF0A2C;
     width: 18px; height: 18px;
     border-radius: 50%;
 }
-
-@mixin background_img {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@mixin footer_text {
-    color: #fff;
-
-}
-@mixin footer_title {
-    font-weight: $bold;
-    font-size: 1.25rem;
-}
-
 @mixin filter_btn {
     width: max-content; height: 33px;
     background-color: #F5F5F5;
@@ -106,4 +108,39 @@ $red: #CF0A2C;
     text-align: center;
     border-radius: 5px;
     padding: 10px 20px;
+}
+@mixin size_btn_unact {
+    font-size: $size12;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+@mixin size_btn_selected {
+    font-size: $size12;
+    padding: 10px 20px;
+    border: 2px solid $red;
+    border-radius: 5px;
+}
+@mixin size_btn_unav {
+    font-size: $size12;
+    padding: 10px 20px;
+    background-color: #F5F5F5;
+    color: #A0A0A0;
+    border-radius: 5px;
+}
+
+//Background Image
+@mixin background_img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//Footer
+@mixin footer_text {
+    color: #fff;
+
+}
+@mixin footer_title {
+    font-weight: $bold;
+    font-size: 1.25rem;
 }
