@@ -4,4 +4,5 @@ const productOpt = [{
     size: [100, 110, 120, 130, 140, 150, 160],
     color: ['Brown', 'Gray', 'Beige'],
     stock: 5,
+    price: 109000,
 },]

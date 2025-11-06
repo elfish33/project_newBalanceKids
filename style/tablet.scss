@@ -1,0 +1,20 @@
+//tablet.scss
+//Tablet
+@use './common.scss' as *;
+
+@media screen and (max-width: 1250px) {
+    .page-home {
+        padding: 0 30px;
+    }
+    /* Tablet 1 row banner */
+    .main_bnr_swiper_box {
+        
+    }
+    /* Tablet 2 row age */
+    .model_img {
+        width: 409px;
+        height: 573px;
+    }
+    
+    /* Tablet 3 row carousel */
+}

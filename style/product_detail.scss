@@ -306,7 +306,7 @@ body {
                                 @include flex-row;
                                 justify-content: space-between;
                                 align-items: center;
-                                gap: 40px;
+                                gap: 30px;
                                 .input_box {
                                     @include flex-row;
                                     justify-content: space-between;
@@ -325,6 +325,8 @@ body {
                                 }
                                 .final_price {
                                     font-size: $size18;
+                                    width: 120px;
+                                    text-align: right;
                                 }
                             }
                         }

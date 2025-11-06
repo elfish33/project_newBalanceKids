@@ -42,72 +42,92 @@ const colorBtn = document.querySelectorAll('.color_btn');
 const sizeBtn = document.querySelectorAll('.size_btn');
 const selectedColorSpan = document.querySelector('.selected_color');
 const selectedSizeSpan = document.querySelector('.selected_size');
-console.log(finalOrderBox, colorBtn)
-
-function finalPopup (){
-    colorBtn.forEach((btn, index)=>{
-        btn.addEventListener('click',()=>{
-            colorBtn.forEach(item=>{
-                item.style.border = 'none';
-            })
-            finalOrderBox.style.display = 'flex';
-            btn.style.border = '1.5px solid #CF0A2C';
-            selectedColorSpan.textContent = productOpt[0].color[index];
-            selectedSizeSpan.textContent = '사이즈';
-        })
-    })
-
-    /* sizeBtn.forEach((btn, index) => {
-        btn.addEventListener('click',()=>{
-            sizeBtn.forEach(item => {
-                item.style.border = 'none';
-            })
-            btn.style.border = '1.5px solid #CF0A2C';
-            selectedSizeSpan.textContent = productOpt[0].size[index];
-        })
-    })
-} */
+const closeBtn = document.querySelector('.close_btn');
 
 
 //Переменные, которые хранят текущий выбор
 let selectedColorStatus = null;
 let selectedSizeStatus = null;
 
+//Проверка статуса
+function statusCheck (){
+    if (selectedColorStatus && selectedSizeStatus) {
+        finalOrderBox.style.display = 'flex';
+        calcPriceSpan.textContent = `0 ₩`;
+        totalPriceP.textContent = `0 ₩`;
+    }
+}
+
 //При клике на цвет нужно сохранить выбор в эту переменную
-/* colorBtn.forEach((btn, index)=>{
+colorBtn.forEach((btn, index)=>{
     btn.addEventListener('click',()=>{
-        selectedColorStatus = productOpt[0].color[index];
-        if (selectedColorStatus && selectedSizeStatus) {
-            finalOrderBox.style.display = 'flex'
-        }
-    })
-}) */
-
-    colorBtn.forEach((btn, index)=>{
-        btn.addEventListener('click',()=>{
-            selectedColorStatus = productOpt[0].color[index];
-            colorBtn.forEach(item=>{
-                item.style.border = 'none';
-            })
-            if (selectedColorStatus && selectedSizeStatus) {
-                finalOrderBox.style.display = 'flex'
-            }
-            btn.style.border = '1.5px solid #CF0A2C';
-            selectedColorSpan.textContent = productOpt[0].color[index];
-            selectedSizeSpan.textContent = '사이즈';
+        colorBtn.forEach((item)=>{
+            item.style.border = 'none';
         })
+        selectedColorStatus = productOpt[0].color[index]; //при клике сохрани цвет продукта в переменную selectedColorStatus
+        btn.style.border = '1.5px solid #CF0A2C';
+        statusCheck();
+        selectedColorSpan.textContent = productOpt[0].color[index];
     })
+})
 
-/*     sizeBtn.forEach((btn, index) => {
-        btn.addEventListener('click',()=>{
-            sizeBtn.forEach(item => {
-                item.style.border = 'none';
-            })
-            btn.style.border = '1.5px solid #CF0A2C';
-            selectedSizeSpan.textContent = productOpt[0].size[index];
+sizeBtn.forEach((btn, index)=>{
+    btn.addEventListener('click', ()=>{
+        sizeBtn.forEach((item)=>{
+            item.style.border = 'none';
         })
+        selectedSizeStatus = productOpt[0].size[index];
+        btn.style.border = '1.5px solid #CF0A2C';
+        statusCheck();
+        selectedSizeSpan.textContent = productOpt[0].size[index];
     })
-} */
+})
+
+closeBtn.addEventListener('click',()=>{
+    finalOrderBox.style.display = 'none';
+    num = 0;
+    orderNum.value = num;
+    colorBtn.forEach((btn)=>{
+        btn.style.border = 'none';
+    })
+    sizeBtn.forEach((btn)=>{
+        btn.style.border = 'none';
+    })
+})
+
+const minusBtn = document.querySelector('.input_box .minus_btn');
+const plusBtn = document.querySelector('.input_box .plus_btn');
+const calcPriceSpan = document.querySelector('.final_price');
+const totalPriceP = document.querySelector('.total_price');
+
+
+//формула для цены которая видна в боксе
+let calcPrice
+//формула для окончательной цены перед покупкой
+let totalPrice
+//input кол-во
+let orderNum = document.querySelector('#order_num')
+//초기 수량 
+let num = 0;
+//Устанавливаю дифолт для количества в инпуте
+orderNum.value = 0;
+
+plusBtn.addEventListener('click', ()=>{
+    num++;
+    orderNum.value = num;
+    calcPrice = productOpt[0].price * num;
+    calcPriceSpan.textContent = `${calcPrice.toLocaleString('ko-kr')} ₩`;
+    totalPriceP.textContent = `${calcPrice.toLocaleString('ko-kr')} ₩`;
+})
+minusBtn.addEventListener('click', ()=>{
+    if (num >=1){
+        num--;
+        orderNum.value = num;
+        calcPrice = productOpt[0].price * num;
+        calcPriceSpan.textContent = `${calcPrice.toLocaleString('ko-kr')} ₩`;
+        totalPriceP.textContent = `${calcPrice.toLocaleString('ko-kr')} ₩`;
+    } else {alert('최소 구매 수량은 1개입니다!')}
+})
 
 
 /* colorBtn[0].addEventListener('click', ()=>{
