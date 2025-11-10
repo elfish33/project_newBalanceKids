@@ -1,21 +1,248 @@
-//tablet.scss
+//responsive.scss
 //Tablet
 @use './common.scss' as *;
 
 @media screen and (max-width: 1250px) {
     
-    .page-home {
-        padding: 0 30px;
+    body {
+        .page-home {
+            padding: 0 30px;
+        }
     }
     /* Tablet 1 row banner */
-    .main_bnr_swiper_box {
-        
+    body {
+        .page-home {
+            .main_bnr_swiper_box {
+                #main_bnr_swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                        }
+                        .slide1 {background-image: url(../image/tablet_banner_001.jpg);}
+                    }
     }
-    /* Tablet 2 row age */
-    .model_img {
-        width: 409px;
-        height: 573px;
-    }
-    
-    /* Tablet 3 row carousel */
 }
+    /* Tablet 2 row age */
+    body {
+        .page-home {
+            .shop_by_age {
+                .age_wrap {
+                    .model_img {
+                        width: 409px;
+                        height: 573px;
+                    }
+                    #age_swiper {width: 100%;}
+                }
+            } 
+        } 
+    } 
+    
+    /* Tablet Style Carousel */
+    body {
+        .page-home {
+            .style_carousel{
+                .bnr_wrap {
+                    padding: 20px;
+                    width: 100%;
+                    background-image: url(../image/stylecarousel_banner_tablet.jpg);
+                    
+                    p {font-size: 1.563rem;}
+                    }
+                    .small_product {
+                        @include flex-row;
+                        gap: 10px;
+                        a {}
+                        }
+                        .product1 {
+                            img {}
+                        }
+                        .product2 {
+                            img {}
+                        }
+                        .product3 {
+                            img {}
+                        }
+                        .product4 {
+                            img {}
+                        }
+                    }
+                }
+            }
+        
+    /* Tablet PlayGround Shoe */
+    body {
+        .page-home {
+            .playground_shoe {
+                .bnr_wrap {
+                    span {
+                        font-size: 1.5rem;
+                        em {
+                            font-size: 1.6rem;}
+                    }
+                }
+            }
+        }
+    }
+    /* Tablet Find Their Style */
+    body {
+        .page-home {
+            .find_their_style {
+                .find_their_style_wrap {
+                    @include flex-col;
+                    gap: 5px;
+                    .style_filters {
+                        
+                        width: auto;
+                        .style_filters_list {
+                            @include flex-row;
+                            padding: 15px;
+                        }
+                    }
+                }
+                .card_content_wrap {
+                    .card_content {
+                        .style_card_row {
+                            &:first-child {
+                                .style_cards:last-child {display: none;}
+                            }
+                            &:last-child {
+                                .style_cards:last-child {display: none;}
+                            }
+                        }
+                    }
+                    .find_photo {
+                        
+                    }
+                }
+            }
+        }
+    }
+    /* Stores */
+    body {
+        .our_stores {
+            .stores_wrap {
+                .store {
+                    h2 {
+                        position: absolute;
+                        top: 50%; left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 100;
+                        text-align: center;
+                        line-height: 130%;
+                        letter-spacing: -0.02em;
+                        font-size: 2.25rem;
+                        color: #fff;
+                        font-family: 'Noto Serif KR';
+                    }
+                }
+            }        
+    }
+}
+    /* Footer */
+    body {
+        footer {
+            margin: 0 auto;
+            .footer_top {
+                width: 100%;
+                max-width: 1024px;
+            }
+            .footer_btm {
+                /* @include flex-col;
+                justify-content: flex-start;
+                align-items: center; */
+            }
+        }
+    } 
+
+    }    
+    }
+}
+
+//Mobile
+@media screen and (max-width: 1024px) {
+    //padding
+    body {
+        header {
+            height: 36px;
+            padding: 10px;
+            .left_gnb {
+                h1 {
+                    width: 38px; height: 28px;
+                    display: block;
+                    img {width: 100%;}
+                }
+                > a {display: none;}
+            }
+            .right_gnb {
+                width: max-content;
+                gap: 10px;
+                a {
+                    svg {width: 12px; height: 12px;}
+                }
+            }
+        }
+        .page-home {
+            max-width: 1024px;
+            padding: 0 15px;
+            .main_bnr_swiper_box {
+                #main_bnr_swiper {
+                    height: 410px;
+                    width: 100%;
+                    max-width: 849px;
+                }
+            }
+            .shop_by_age {
+                h1 {
+                    a {@include M_title_h1}
+                }
+                .age_btn {
+                    button {font-size: $size12;}
+                }
+                .age_wrap {
+                    @include flex-col;
+                    .model_img {
+                        width: 100%;
+                        height: 573px;
+                    }
+                    #age_swiper {
+                        width: 100%;
+                        .swiper-wrapper {
+                            .product_card {
+                                .product_info {
+                                    .product_title {
+                                        font-size: $size14;
+                                        font-weight: $medium;
+                                    }
+                                    .product_price {
+                                        font-size: $size14;
+                                        font-weight: $bold;
+                                    }
+                                    .product_size {
+                                        font-size: $size10;
+                                        font-weight: normal;
+                                    }
+                                } 
+                            } 
+                        } 
+                    }
+                }
+            }
+            .style_carousel {
+
+                .bnr_wrap {
+                    @include flex-col;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    background-image: url(../image/mobile_carousel_banner.jpg);
+                    p {}
+                    a {width: calc(25% - 15px);
+                        img {
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

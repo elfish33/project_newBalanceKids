@@ -7,7 +7,7 @@ body {
         @include margin-auto;
         @include width1500;
         .trending_title_filter {
-            h1 {@include title_h1;}
+            h1 {@include PC_title_h1;}
             .product_filters {
                 @include flex-row;
                 gap: 15px;

@@ -58,11 +58,11 @@ body {
         }
         .shop_by_age {
             @include margin-auto;
-            @include width1500;
+            @include PC_width;
             @include flex-col; gap: 20px;
             padding: 100px 0;
             h1 {
-                a {@include title_h1;}
+                a {@include PC_title_h1;}
             }
             .age_btn {
                 @include flex-row;
@@ -130,11 +130,14 @@ body {
         }
         .style_carousel{
             @include margin-auto;
-            @include width1500;
+            @include PC_width;
+            width: 100%;
+            max-width: 1500px;
+            /* @include width1500; */
             /* background image */
             .bnr_wrap {
                 padding: 20px;
-                width: 1500px;
+                width: 100%;
                 height: 644px;
                 background-image: url(../image/style_carousel_bnr.jpg);
                 background-position: center;
@@ -175,12 +178,12 @@ body {
         }
         .trending {
             @include margin-auto;
-            @include width1500;
+            @include PC_width;
             padding: 130px 0;
             @include flex-col;
             gap: 30px;
             h1 {
-                a {@include title_h1;}
+                a {@include PC_title_h1;}
             }
             .filter_menu {
                 padding: 0 10px;
@@ -251,11 +254,10 @@ body {
         }
         .playground_shoe {
             @include margin-auto;
-            @include width1500;
-            width: 1500px; height: 747px;
-            
+            @include PC_width;
             .bnr_wrap {
-                height: 100%;
+                padding-top: 50%;
+                width: 100%;
                 background-image: url(../image/playground_shoe_bnr.png);
                 @include background_img;
                 position: relative;
@@ -275,23 +277,26 @@ body {
         }
         .style_stories {
             @include margin-auto;
-            @include width1500;
+            @include PC_width;
             padding-top: 150px;
             h1 {padding-bottom: 30px;
-                a {@include title_h1;}
+                a {@include PC_title_h1;}
             }
             .style_swiper_wrap {
                 #stylestory_swiper {
                     width: 100%;
                     .swiper-wrapper {
-                        /* height: 760px;
-                        width: 2050px; */ /* overflow: hidden; */
                         .swiper-slide {
-                            /* width: 475px; height: 749px; */
+                            width: auto; /* добавила */
+                            display: flex;/* добавила */
+                            flex-direction: column;/* добавила */
                             @include flex-col;
                             gap: 15px;
                             .style_image {
-                                width: 475px; height: 510px;
+                                /* width: 475px; height: 510px; */ /* ломает адаптивность */
+                                width: 100%;
+                                min-height: 510px; /* высота картинок, нужна чтобы картинки показывались, так как сам по себе див пустой */
+                                max-width: 475px;
                                 a {
                                     overflow: hidden;
                                     display: inline-block;
@@ -317,7 +322,7 @@ body {
                                 width: 100%;
                                 .style_small {
                                     display: block;
-                                    width: 100px; height: 100px;
+                                    width: 25%;
                                     border: 1px solid #A0A0A0;
                                     border-radius: 5px;
                                     overflow: hidden;
@@ -362,105 +367,117 @@ body {
         }
         .find_their_style {
             @include margin-auto;
-            @include width1500;
+            @include PC_width;
             padding-top: 100px;
             h1 {
-                a {@include title_h1;}
+                a {@include PC_title_h1;}
             }
             .find_their_style_wrap {
                 @include flex-row;
-                gap: 40px;
+                gap: 20px;
                 padding-top: 30px;
                 .style_filters {
                     display: inline-block;
                     width: 233px;
+                    h2 {
+                        padding-bottom: 10px;
+                        font-weight: $bold;
+                        font-size: 1.25rem;
+                        letter-spacing: -0.02em;
+                    }
                     .style_filters_list {
                         padding: 30px;
                         @include flex-col;
                         gap: 20px;
-                        h2 {
-                            padding-bottom: 10px;
-                            font-weight: $bold;
-                            font-size: 1.25rem;
-                            letter-spacing: -0.02em;
-                        }
                         li {
                             a {
                                 font-weight: $medium;
+                                display: block;
+                                white-space: nowrap;
                                 &:hover {color: $red;}
                             }
                             
                         }
                     }
                 }
-                .card_content {
-                    @include flex-col;
-                    justify-content: center;
-                    align-items: center;
-                    .style_card_row {
-                        @include flex-row;
+                .card_content_wrap {
+                    @include flex-row; gap: 50px;
+                    .card_content {
+                        @include flex-col;
                         justify-content: center;
                         align-items: center;
-                        gap: 20px;
-                        .style_cards {
-                            .filter_card_img {
-                                position: relative;
-                                width: 220px; height: 220px;
-                                transition: transform 0.3 ease;
-                                &:hover {transform: scale(1.01);}
-                                img {width: 100%;}
-                                .like_btn {
-                                    width: 15px; height: 15px;
-                                    position: absolute;
-                                    bottom: 10px;
-                                    right: 35px;
-                                }
-                                .cart_btn {
-                                    width: 15px; height: 15px;
-                                    position: absolute;
-                                    bottom: 10px;
-                                    right: 10px;
-                                }
-                            }
-                            .filter_card_info {
-                                @include flex-col;
-                                gap: 10px;
-                                padding: 20px;
-                                h2 {
-                                    .product_title {
-                                        font-size: 1rem;
-                                        font-weight: $semiBold;
-                                        font-weight: 700; /* bold */
-                                        line-height: 100%;
-                                        letter-spacing: -0.02em;
-                                        &:hover {color: $red;} 
+                        .style_card_row {
+                            @include flex-row;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 20px;
+                            .style_cards {
+                                .filter_card_img {
+                                    position: relative;
+                                    width: 220px; height: 220px;
+                                    transition: transform 0.3 ease;
+                                    &:hover {transform: scale(1.01);}
+                                    img {width: 100%;}
+                                    .like_btn {
+                                        width: 15px; height: 15px;
+                                        position: absolute;
+                                        bottom: 10px;
+                                        right: 35px;
+                                    }
+                                    .cart_btn {
+                                        width: 15px; height: 15px;
+                                        position: absolute;
+                                        bottom: 10px;
+                                        right: 10px;
                                     }
                                 }
-                                .product_size {
-                                    font-size: 1rem;
-                                    @include product_size;}
-                                .product_price {
-                                    font-weight: $bold;
-                                    @include product_price;}
+                                .filter_card_info {
+                                    @include flex-col;
+                                    gap: 10px;
+                                    padding: 20px;
+                                    h2 {
+                                        .product_title {
+                                            font-size: 1rem;
+                                            font-weight: $semiBold;
+                                            font-weight: 700; /* bold */
+                                            line-height: 100%;
+                                            letter-spacing: -0.02em;
+                                            &:hover {color: $red;} 
+                                        }
+                                    }
+                                    .product_size {
+                                        font-size: 1rem;
+                                        @include product_size;}
+                                    .product_price {
+                                        font-weight: $bold;
+                                        @include product_price;}
+                                }
                             }
                         }
                     }
-                }
-                .find_photo {
-                    width: 480px; height: 734px;
-                    img {width: 100%;}
+                    .find_photo {
+                        max-width: 480px;
+                        min-width: 300px;
+                        width: 100%;
+                        img {
+                            width: 100%;
+                            height: auto;
+                            display: block;
+                        }
+                    }
                 }
             }
         }
         .our_stores {
             @include margin-auto;
-            @include width1500;
+            @include PC_width;
             padding: 80px 0;
             h1 {
-                a {@include title_h1}
+                a {@include PC_title_h1}
             }
             .stores_wrap {
                 padding: 30px 0;
+                width: 100%;
                 @include flex-row;
                 justify-content: center;
                 align-items: center;
@@ -478,9 +495,10 @@ body {
                         text-align: center;
                         line-height: 130%;
                         letter-spacing: -0.02em;
-                        font-size: 2.25rem;
+                        font-size: clamp(1.25rem, 2vw, 2.25rem);/* лучше всего для шрифтов: задаем диапазон */
                         color: #fff;
                         font-family: 'Noto Serif KR';
+                        white-space: nowrap;
                     }
                 }
                 .store1 {background-image: url(../image/store_img_001.png);}
@@ -491,18 +509,18 @@ body {
     }
     footer {
         @include flex-col;
+        width: 100%;
         justify-content: flex-start;
         align-items: center;
-        height: 700px; gap: 30px;
-        width: 100%; background-color: #232323;
+        height: max-content; gap: 30px;
+        background-color: #232323;
         color: #fff;
         .footer_top {
             padding: 40px 0;
             @include flex-row;
-            justify-content: flex-start;
+            justify-content: space-evenly;
             align-items: center;
-            gap: 300px;
-            width: 1500px;
+            max-width: 1500px; width: 100%;
             .top_menu {
                 
                 a {
@@ -514,10 +532,11 @@ body {
             }
         }
         .footer_btm {
+            padding: 0 40px;
             @include flex-row;
             justify-content: space-between;
             align-items: center;
-            width: 1500px;
+            max-width: 1500px; width: 100%;
             .detailed_menu {
                 width: 511px;
                 @include flex-row;
@@ -539,7 +558,7 @@ body {
                 justify-content: flex-start;
                 align-items: flex-start;
                 gap: 25px;
-                width: 700px; height: 330px;
+                
                 .sns_box {
                     @include flex-row;
                     justify-content: flex-start;
