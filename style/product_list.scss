@@ -1,11 +1,12 @@
 @use './common.scss' as *;
 
 body {
+    background-color: rgb(187, 97, 97);
     max-width: 1920px;
     margin: 0 auto;
     .page-list {
         @include margin-auto;
-        @include width1500;
+        max-width: 1500px;
         .trending_title_filter {
             h1 {@include PC_title_h1;}
             .product_filters {
@@ -26,7 +27,7 @@ body {
             gap: 30px;
             .wrap_row {
                 @include flex-row;
-                gap: 30px;
+                justify-content: space-between;
                 .model_ad {
                     aspect-ratio: 350 / 560;
                     width: 100%; height: 100%;
@@ -36,7 +37,7 @@ body {
                 .prd_box {
                     width: calc(100% - (350px + 30px));
                     @include flex-row;
-                    gap: 30px;
+                    justify-content: space-evenly;
                     .product_card {
                         @include flex-col;
                         gap: 10px;
@@ -106,10 +107,15 @@ body {
                     img {width: 100%;}
                 }
                 .card1 {}
+                
             }
-            .row2 {}
+            .row2 {
+                .prd_box {width: 100%;}
+                }
             .row3 {}
-            .row4 {}
+            .row4 {
+                .prd_box {width: 100%;}
+                }
             .pagination {
                 padding: 50px 0;
                 text-align: center;
