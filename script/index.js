@@ -6,15 +6,19 @@ const mainBnrSwiper =  new Swiper ('#main_bnr_swiper', {
 
 const shopByAgeSwiper = new Swiper ('#age_swiper',{
     //mobile 기준
-    slidesPerView: 1.3,
+    slidesPerView: 1.5,
     spaceBetween: 40,
     breakpoints: {
         640: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.7,
             spaceBetween: 15,
         },
         1024 : {
-            slidesPerView: 2.5,
+            slidesPerView: 1.3,
+            spaceBetween: 15,
+        },
+        1275 : {
+            slidesPerView: 2.1,
             spaceBetween: 15,
         },
     },
@@ -42,14 +46,20 @@ const trendSwiper = new Swiper ('.trend_swiper_wrap #trend_swiper', {
 const styleSwiper = new Swiper ('#stylestory_swiper',{
     slidesPerView: 1.5,
     spaceBetween: 15,
-    loop: true,
+    lazy: false, // отключаем ленивую загрузку
+    effect: 'slide',
+    loop: false,
     breakpoints: {
         640: {
-            slidesPerView: 2.5,
+            slidesPerView: 2,
             spaceBetween: 15,
         },
         1024: {
-            slidesPerView: 3,
+            slidesPerView: 2.5,
+            spaceBetween: 15,
+        },
+        1250: {
+            slidesPerView: 2.8,
             spaceBetween: 15,
         },
     },

@@ -67,12 +67,14 @@ $size10: 0.625rem;
     font-weight: 700; /* bold */
     line-height: 100%;
     letter-spacing: -0.02em;
-    font-size: 1.125rem;/* 18px */
+    font-size: clamp(0.875rem, 2vw, 1.125rem); /* 14 ~ 18px */
+    /* font-size: 1.125rem; *//* 18px */
 }
 @mixin product_price {
     font-weight: 500;
     line-height: 100%;
     letter-spacing: -0.02em;
+    font-size: clamp(0.875rem, 2vw, 1rem); /* 14 ~ 16px */
 }
 @mixin product_size {
     line-height: 100%;
@@ -88,6 +90,7 @@ $size10: 0.625rem;
 
 @mixin product_type {
     color: #5F5F5F;
+    font-size: clamp(0.875rem, 2vw, 1rem); /* 14 ~ 16px */
 }
 
 @mixin product_review {

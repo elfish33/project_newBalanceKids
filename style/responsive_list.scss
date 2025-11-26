@@ -1,0 +1,100 @@
+//responsive_list.scss
+
+
+//Tablet
+@use './common.scss' as *;
+
+@media screen and (max-width: 1250px) {
+    body {
+        .page-list {
+            padding: 0 30px;
+            .product_wrap {
+                .row1 {}
+                .wrap_row {
+                    gap: 15px;
+                    max-width: 964px;
+                    .model_ad {
+                        max-width: 246px; max-height: 412px;
+                        min-width: 240px;
+                        width: 100%; height: 100%;
+                        > img {}
+                    }
+                    .prd_box {
+                        width: 90%;
+                        gap: 30px;
+                        .product_card {
+                            .product_img {
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+//Mobile
+@media screen and (max-width: 1024px) {
+    body {
+        .page-list {
+            width: 100%;
+            padding: 0 15px;
+            .product_wrap {
+                .row1 {
+                    @include flex-col;
+                    justify-content: center;
+                    align-items: center;
+                    .prd_box {
+                        .card3 {display: none;}
+                    }
+                }
+                .row2 {
+                    @include flex-col; flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    .prd_box {
+                        .card6 {display: none;}
+                        .card7 {display: none;}
+                    }
+                }
+                .row3 {
+                    @include flex-col; flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    .prd_box {
+                        .card10 {display: none;}
+                    }
+                }
+                .row4 {
+                    @include flex-col; flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    .prd_box {
+                        .card14 {display: none;}
+                        .card13 {display: none;}
+                    }
+                }
+                .wrap_row {
+                    .model_ad {
+                        max-width: 610px; height: 524px;
+                        width: 100%;
+                        > img {
+                            width: 100%; height: 100%;
+                            object-fit: cover;
+                            object-position: top;
+                        }
+                    }
+                    .prd_box {
+                        justify-content: center; align-items: center;
+                        gap: 25px;
+                        .product_card {
+                            .product_img {
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
