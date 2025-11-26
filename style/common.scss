@@ -36,7 +36,7 @@ $size10: 0.625rem;
 }
 
 @mixin width1500 {
-    width: 1500px;
+    max-width: 1500px;
 }
 
 @mixin flex-row {

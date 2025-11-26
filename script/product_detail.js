@@ -1,7 +1,7 @@
 //product_detail.js
 const thumbnailImg = document.querySelectorAll('.thumbnail_img')
 const mainImg = document.querySelector('.product_main_img')
-console.log(thumbnailImg, mainImg);
+//console.log(thumbnailImg, mainImg);
 
 //(1) thumbnail 이미지에 hover 시 해당 이미지 크게 보여주기
 //(2) thumbnail 이미지에 hover 시 해당 이미지 thumbnail border 생기기
@@ -26,7 +26,7 @@ const productSticky = document.querySelector('.product_link')
 const sizeSticky = document.querySelector('.size_link')
 const sizeWrap = document.querySelector('.product_size')
 const productWrap = document.querySelector('.product_info')
-console.log(productSticky, sizeSticky, productWrap, sizeWrap)
+//console.log(productSticky, sizeSticky, productWrap, sizeWrap)
 sizeSticky.addEventListener('click', (e) => {
     e.preventDefault();
     window.scrollTo(0, sizeWrap.offsetTop);
@@ -128,6 +128,25 @@ minusBtn.addEventListener('click', ()=>{
         totalPriceP.textContent = `${calcPrice.toLocaleString('ko-kr')} ₩`;
     } else {alert('최소 구매 수량은 1개입니다!')}
 })
+
+
+//Clone Node & App Child for responsive web
+const imgContainerSection = document.querySelector('.product_image_container');
+const prdPurchaseDiv = document.querySelector('.prd_purchase');
+console.log(imgContainerSection, prdPurchaseDiv)
+
+const prdPurchaseClone = prdPurchaseDiv.cloneNode(true);
+prdPurchaseClone.setAttribute('id', 'tablet_mobile_purchase')
+imgContainerSection.appendChild(prdPurchaseClone);
+
+//Image thumbnail Clone for responsive Design
+const prdImgWrap = document.querySelector('.prd_img_wrap');
+const prdThumbnail = document.querySelector('.product_thumbnail');
+
+let prdThumbnailCloned = prdThumbnail.cloneNode(true);
+prdThumbnailCloned.setAttribute('id', 'tab_mob_thumbnail');
+prdImgWrap.appendChild(prdThumbnailCloned);
+
 
 
 /* colorBtn[0].addEventListener('click', ()=>{

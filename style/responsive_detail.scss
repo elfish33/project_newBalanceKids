@@ -1,0 +1,77 @@
+//responsive_detail.scss
+
+
+//Tablet
+@use './common.scss' as *;
+
+@media screen and (max-width: 1560px) {
+    html {
+        body {
+            .page-details {
+                flex-flow: column nowrap;
+                .prd_main {
+                    margin: 0 auto;
+                    @include flex-col;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 60px;
+                    width: 100%;
+                    .product_image_container {
+                        #tablet_mobile_purchase {
+                            width: 100%;
+                            margin-top: 30px;
+                            display: block;}/* Desktop에서 숨기기 -> Tab & Mob에서 보이기 */
+                    }
+                }
+                #desktop_purchase {display: none;} /* Desktop에서 보이기 -> Tab & Mob에서 숨기기 */
+            }
+        } 
+    }
+}
+@media screen and (max-width: 1250px) {
+}
+//Mobile
+@media screen and (max-width: 930px) {
+    html {
+        body {
+            .page-details {
+                max-width: 930px;
+                .prd_main {
+                    .product_image_container {
+                        .prd_img_wrap {
+                            flex-flow: column nowrap;
+                            align-items: center;
+                            .product_big_img {
+                                max-width: 410px;
+                                max-height: 410px;
+                            }
+                            #prd_thumb_desktop {display: none;}
+                            #tab_mob_thumbnail {
+                                display: flex; flex-flow: row nowrap;
+                            }
+                            .product_thumbnail {
+                                .thumbnail_img {
+                                    width: 50px;
+                                    height: 50px;
+                                }
+                            }
+                        }
+                    }
+                    .product_info_container {
+                        .sticky_menu {
+                            width: 100%;
+                            max-width: 730px;
+                            margin: 30px auto;
+                        }
+                        .product_info {
+                            max-width: 730px;
+                            .info_details_img {
+                                height: 7500px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
