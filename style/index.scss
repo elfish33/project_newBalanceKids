@@ -1,8 +1,22 @@
 @use './common.scss' as *;
 
+/* Vertical Scroll Cross Browser */
+html {
+    overflow-y: auto;              /* don’t force the gutter 스마트하게, 필요할 때만 스크롤 보여달라*/
+    -ms-overflow-style: none;      /* IE/Edge */
+    scrollbar-width: none;         /* Firefox */
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0; /* Chrome/Safari */
+    }
+}
+
 body {
     max-width: 1920px;
     margin: 0 auto;
+    //overflow-y: auto;   /* vertical scroll 남기고 밑에서*/
+    //scrollbar-width: none; /* Firefox scrollbar 없애기 */
+    //&::-webkit-scrollbar {display: none;}/* scrollbar 없애기 for Chrome, Safari */
     header {
         position: sticky; top: 0;
         background-color: #fff;
@@ -37,14 +51,6 @@ body {
                 }
                 svg {transform: scale(1.02);}
             }
-        }
-    }
-    .fixed_top_btn {
-        #tothetop_btn {
-            position: fixed;
-            bottom: 50px;
-            right: 30px;
-            z-index: 998;
         }
     }
     .page-home {

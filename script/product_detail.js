@@ -12,7 +12,7 @@ thumbnailImg.forEach((thumb, index) => {
             item.style.border = 'none';
         });
     thumb.style.border = '1.5px solid #CF0A2C';
-    mainImg.style.backgroundImage = `url('/image/product_thum_00${index + 1}.png')`;
+    mainImg.style.backgroundImage = `url('./image/product_thum_00${index + 1}.png')`;
     mainImg.style.backgroundRepeat = 'no-repeat';
     mainImg.style.backgroundSize = 'cover';
     });
@@ -146,6 +146,12 @@ const prdThumbnail = document.querySelector('.product_thumbnail');
 let prdThumbnailCloned = prdThumbnail.cloneNode(true);
 prdThumbnailCloned.setAttribute('id', 'tab_mob_thumbnail');
 prdImgWrap.appendChild(prdThumbnailCloned);
+
+//To the top button
+const topBtn = document.querySelector('.tothetop_btn');
+topBtn.addEventListener('click',()=>{
+    window.scrollTo(0, 0);
+})
 
 
 

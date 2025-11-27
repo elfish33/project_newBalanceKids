@@ -1,4 +1,22 @@
 @charset "UTF-8";
+body .fixed_top_btn .tothetop_btn {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 998;
+}
+
+/* Vertical Scroll Cross Browser */
+html {
+  overflow-y: auto; /* don’t force the gutter 스마트하게, 필요할 때만 스크롤 보여달라*/
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+  width: 0;
+  height: 0; /* Chrome/Safari */
+}
+
 body {
   max-width: 1920px;
   margin: 0 auto;
@@ -44,12 +62,6 @@ body header .right_gnb a:hover::after {
 }
 body header .right_gnb a svg {
   transform: scale(1.02);
-}
-body .fixed_top_btn #tothetop_btn {
-  position: fixed;
-  bottom: 50px;
-  right: 30px;
-  z-index: 998;
 }
 body .page-home .main_bnr_swiper_box {
   max-width: 100vw;
