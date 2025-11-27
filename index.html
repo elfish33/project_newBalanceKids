@@ -12,6 +12,10 @@
     <!--프리텐다드(v1.3.9) 웹글꼴 연결주소-->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- Font 연결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nanum+Myeongjo&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
     <!--플러그인 필수 css cdn 연결-->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -25,10 +29,10 @@
     <header>
         <div class="left_gnb">
             <h1><a href="./index.html"><img src="./image/nb_logo.png" alt="뉴발란스 로고"></a></h1>
-            <a href="#">Men</a>
-            <a href="#">Women</a>
+            <a href="./product_list.html">Men</a>
+            <a href="./product_list.html">Women</a>
             <a href="./product_list.html">Kids</a>
-            <a href="#">Calendar</a>
+            <a href="./product_list.html">Calendar</a>
         </div>
         <div class="right_gnb">
             <!-- search -->
@@ -78,14 +82,36 @@
             </a>
         </div>
     </header>
+    <div class="fixed_top_btn">
+        <button type="button" id="tothetop_btn">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g filter="url(#filter0_d_493_3)">
+                <rect x="4" width="40" height="40" rx="20" fill="white"/>
+                <path d="M19.3438 13.1674L24.8438 7.38965M24.8438 7.38965L30.3438 13.1674M24.8438 7.38965V33.3896" stroke="#CF0A2C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </g>
+                <defs>
+                <filter id="filter0_d_493_3" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                <feOffset dy="4"/>
+                <feGaussianBlur stdDeviation="2"/>
+                <feComposite in2="hardAlpha" operator="out"/>
+                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_493_3"/>
+                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_493_3" result="shape"/>
+                </filter>
+                </defs>
+                </svg>
+        </button>
+    </div>
     <main class="page-home">
         <div class="main_bnr_swiper_box">
             <div class="swiper" id="main_bnr_swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide slide1"></div><!-- background로 이미지 놓을 예정 -->
-                    <div class="swiper-slide slide2"></div><!-- background로 이미지 놓을 예정 -->
-                    <div class="swiper-slide slide3"></div><!-- background로 이미지 놓을 예정 -->
-                    <div class="swiper-slide slide4"></div><!-- background로 이미지 놓을 예정 -->
+                    <a class="swiper-slide slide1" href="./product_list.html"><span>City Mood<br>with ALLDAY DOWN</span></a><!-- background로 이미지 놓을 예정 -->
+                    <a class="swiper-slide slide2" href="./product_list.html"><span>Hello, Cozy Winter Days!</span></a><!-- background로 이미지 놓을 예정 -->
+                    <a class="swiper-slide slide3" href="./product_list.html"><span>2002 Winter Basic</span></a><!-- background로 이미지 놓을 예정 -->
+                    <a class="swiper-slide slide4" href="./product_list.html"><span>1906,<br>Metalic Gray</span></a><!-- background로 이미지 놓을 예정 -->
                 </div>
             </div>
         </div>
@@ -104,7 +130,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide product_card card1"><!-- product card -->
                             <div class="age_card">
-                                <a href="#"><img src="./image/age_product_001.jpg" alt="골지 레이어드 티셔츠"></a><!-- product image -->
+                                <a href="./product_detail.html"><img src="./image/age_product_001.jpg" alt="골지 레이어드 티셔츠"></a><!-- product image -->
                                 <div class="product_info">
                                     <h2 class="product_title">NBSC_골지 레이어드 티셔츠</h2>
                                     <p class="product_price">59,900원</p>
@@ -118,7 +144,7 @@
                         </div>
                         <div class="swiper-slide product_card card2"><!-- product card -->
                             <div class="age_card">
-                                <a href="#"><img src="./image/age_product_002.jpg" alt="PZ530UL"></a><!-- product image -->
+                                <a href="./product_detail.html"><img src="./image/age_product_002.jpg" alt="PZ530UL"></a><!-- product image -->
                                 <div class="product_info">
                                     <h2 class="product_title">PZ530UL</h2>
                                     <p class="product_price">99,900원</p>
@@ -132,7 +158,7 @@
                         </div>
                         <div class="swiper-slide product_card card3"><!-- product card -->
                             <div class="age_card">
-                                <a href="#"><img src="./image/age_product_003.jpg" alt="골지 레이어드 티셔츠"></a><!-- product image -->
+                                <a href="./product_detail.html"><img src="./image/age_product_003.jpg" alt="골지 레이어드 티셔츠"></a><!-- product image -->
                                 <div class="product_info">
                                     <h2 class="product_title">NBSC_골지 레이어드 티셔츠</h2>
                                     <p class="product_price">59,900원</p>
@@ -146,7 +172,7 @@
                         </div>
                         <div class="swiper-slide product_card card1"><!-- product card -->
                             <div class="age_card">
-                                <a href="#"><img src="./image/age_product_001.jpg" alt="골지 레이어드 티셔츠"></a><!-- product image -->
+                                <a href="./product_detail.html"><img src="./image/age_product_001.jpg" alt="골지 레이어드 티셔츠"></a><!-- product image -->
                                 <div class="product_info">
                                     <h2 class="product_title">NBSC_골지 레이어드 티셔츠</h2>
                                     <p class="product_price">59,900원</p>
@@ -160,7 +186,7 @@
                         </div>
                         <div class="swiper-slide product_card card2"><!-- product card -->
                             <div class="age_card">
-                                <a href="#"><img src="./image/age_product_002.jpg" alt="PZ530UL"></a><!-- product image -->
+                                <a href="./product_detail.html"><img src="./image/age_product_002.jpg" alt="PZ530UL"></a><!-- product image -->
                                 <div class="product_info">
                                     <h2 class="product_title">PZ530UL</h2>
                                     <p class="product_price">99,900원</p>
@@ -180,10 +206,10 @@
             <div class="bnr_wrap">
                 <p>STYLE<br>CAROUSEL</p>
                 <div class="small_product">
-                    <a href="#" class="product1"><img src="./image/style_03-01.png" alt=""></a>
-                    <a href="#" class="product2"><img src="./image/style_03-02.png" alt=""></a>
-                    <a href="#" class="product3"><img src="./image/style_03-03.png" alt=""></a>
-                    <a href="#" class="product4"><img src="./image/style_03-04.png" alt=""></a>
+                    <a href="./product_detail.html" class="product1"><img src="./image/style_03-01.png" alt=""></a>
+                    <a href="./product_detail.html" class="product2"><img src="./image/style_03-02.png" alt=""></a>
+                    <a href="./product_detail.html" class="product3"><img src="./image/style_03-03.png" alt=""></a>
+                    <a href="./product_detail.html" class="product4"><img src="./image/style_03-04.png" alt=""></a>
                 </div>
             </div>
         </section>
@@ -191,13 +217,13 @@
             <h1><a href="#">WHAT'S TRENDING</a></h1>
             <div class="filter_menu">
                 <div class="left_filter">
-                    <a href="#" class="filter_title">신발</a>
-                    <a href="#" class=" filter_title">의류</a>
-                    <a href="#" class=" filter_title">용품</a>
-                    <a href="#" class=" filter_title">전체 보기</a>
+                    <a href="./product_list.html" class="filter_title">신발</a>
+                    <a href="./product_list.html" class=" filter_title">의류</a>
+                    <a href="./product_list.html" class=" filter_title">용품</a>
+                    <a href="./product_list.html" class=" filter_title">전체 보기</a>
                 </div>
                 <div class="right_filter">
-                    <a href="#">상품 더 보기</a>
+                    <a href="./product_list.html">상품 더 보기</a>
                 </div>
             </div>
             <div class="trend_swiper_wrap">
@@ -205,65 +231,65 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide trend1">
                             <div class="trend_product">
-                                <img src="./image/best_001.png" alt="미니 레이서" class="trend_product_img"><!-- 상품 이미지 넣기! -->
+                                <a href="./product_detail.html"><img src="./image/best_001.png" alt="미니 레이서" class="trend_product_img"></a>
                                 <div class="img_icons">
                                     <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                                 </div>
                             </div>
                             <div class="trend_card_details">
-                                <h2 class="product_title"><a href="#">MINI RACER | 미니 레이서</a></h2>
+                                <h2 class="product_title"><a href="./product_detail.html">MINI RACER | 미니 레이서</a></h2>
                                 <p class="product_type">리틀키즈 운동화</p>
                                 <p class="product_price">119,000 ₩</p>
                             </div>
                         </div>
                         <div class="swiper-slide trend2">
                             <div class="trend_product">
-                                <img src="./image/best_002.png" alt="스토미 팬다" class="trend_product_img"><!-- 상품 이미지 넣기! -->
+                                <a href="./product_detail.html"><img src="./image/best_002.png" alt="스토미 팬다" class="trend_product_img"></a>
                                 <div class="img_icons">
                                     <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                                 </div>
                             </div>
                             <div class="trend_card_details">
-                                <h2 class="product_title"><a href="#">STORMY PANDA | 스토미 팬다</a></h2>
+                                <h2 class="product_title"><a href="./product_detail.html">STORMY PANDA | 스토미 팬다</a></h2>
                                 <p class="product_type">베이비 운동화</p>
                                 <p class="product_price">99,000 ₩</p>
                             </div>
                         </div>
                         <div class="swiper-slide trend3">
                             <div class="trend_product">
-                                <img src="./image/best_003.png" alt="문바운스" class="trend_product_img"><!-- 상품 이미지 넣기! -->
+                                <a href="./product_detail.html"><img src="./image/best_003.png" alt="문바운스" class="trend_product_img"></a>
                                 <div class="img_icons">
                                     <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                                 </div>
                             </div>
                             <div class="trend_card_details">
-                                <h2 class="product_title"><a href="#">MOON BOUNCE | 문바운스</a></h2>
+                                <h2 class="product_title"><a href="./product_detail.html">MOON BOUNCE | 문바운스</a></h2>
                                 <p class="product_type">주니어 운동화</p>
                                 <p class="product_price">99,000 ₩</p>
                             </div>
                         </div>
                         <div class="swiper-slide trend4">
                             <div class="trend_product">
-                                <img src="./image/best_001.png" alt="미니 레이서" class="trend_product_img"><!-- 상품 이미지 넣기! -->
+                                <a href="./product_detail.html"><img src="./image/best_001.png" alt="미니 레이서" class="trend_product_img"></a>
                                 <div class="img_icons">
                                     <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                                 </div>
                             </div>
                             <div class="trend_card_details">
-                                <h2 class="product_title"><a href="#">MINI RACER | 미니 레이서</a></h2>
+                                <h2 class="product_title"><a href="./product_detail.html">MINI RACER | 미니 레이서</a></h2>
                                 <p class="product_type">리틀키즈 운동화</p>
                                 <p class="product_price">119,000 ₩</p>
                             </div>
                         </div>
                         <div class="swiper-slide trend5">
                             <div class="trend_product">
-                                <img src="./image/best_002.png" alt="스토미 팬다" class="trend_product_img"><!-- 상품 이미지 넣기! -->
+                                <a href="./product_detail.html"><img src="./image/best_002.png" alt="스토미 팬다" class="trend_product_img"></a>
                                 <div class="img_icons">
                                     <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                                 </div>
                             </div>
                             <div class="trend_card_details">
-                                <h2 class="product_title"><a href="#">STORMY PANDA | 스토미 팬다</a></h2>
+                                <h2 class="product_title"><a href="./product_detail.html">STORMY PANDA | 스토미 팬다</a></h2>
                                 <p class="product_type">베이비 운동화</p>
                                 <p class="product_price">99,000 ₩</p>
                             </div>
@@ -274,9 +300,11 @@
             </div>
         </section>
         <section class="playground_shoe">
-            <div class="bnr_wrap">
-                <span>The ultimate<br><em>playground shoe</em></span>
-            </div>
+            <a href="./product_list.html">
+                <div class="bnr_wrap">
+                    <span>The ultimate<br><em>playground shoe</em></span>
+                </div>
+            </a>
         </section>
         <section class="style_stories">
             <h1><a href="#">STYLE STORIES</a></h1>
@@ -284,7 +312,7 @@
                 <div class="swiper" id="stylestory_swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide story1">
-                            <a href="#"><div class="style_image"></div></a>
+                            <a href="./product_detail.html"><div class="style_image"></div></a>
                             <div class="style_card_content">
                                     <h2 class="style_title">When I was young as you</h2>
                                     <p class="style_subtitle">함께 걷는 순간, 스타일도 함께</p>
@@ -292,14 +320,14 @@
                                     <p class="style_size">사이즈 : 170 ~ 220</p>
                             </div>
                             <div class="style_thumbnail">
-                                    <a href="#" class="style_small style_thumnail_1"><img src="./image/style01_small_01.png" alt="썸네일 1"></a>
-                                    <a href="#" class="style_small style_thumnail_2" ><img src="./image/style01_small_02.png" alt="썸네일 2"></a>
-                                    <a href="#" class="style_small style_thumnail_3"><img src="./image/style01_small_03.png" alt="썸네일 3"></a>
-                                    <a href="#" class="style_small style_thumnail_4"><img src="./image/style01_small_01.png" alt="썸네일 4"></a>
+                                    <a href="./product_detail.html" class="style_small style_thumnail_1"><img src="./image/style01_small_01.png" alt="썸네일 1"></a>
+                                    <a href="./product_detail.html" class="style_small style_thumnail_2" ><img src="./image/style01_small_02.png" alt="썸네일 2"></a>
+                                    <a href="./product_detail.html" class="style_small style_thumnail_3"><img src="./image/style01_small_03.png" alt="썸네일 3"></a>
+                                    <a href="./product_detail.html" class="style_small style_thumnail_4"><img src="./image/style01_small_01.png" alt="썸네일 4"></a>
                             </div>
                         </div>
                     <div class="swiper-slide story2">
-                        <a href="#"><div class="style_image"></div></a>
+                        <a href="./product_detail.html"><div class="style_image"></div></a>
                         <div class="style_card_content">
                                 <h2 class="style_title">530 Early Winter</h2>
                                 <p class="style_subtitle">아이의 겨울, 뉴발란스로 더 특별하게</p>
@@ -307,13 +335,13 @@
                                 <p class="style_size">사이즈 : 130 ~ 220</p>
                         </div>
                         <div class="style_thumbnail">
-                                <a href="#" class="style_small style_thumnail_1"><img src="./image/story_002_img_001.png" alt="썸네일 1"></a>
-                                <a href="#" class="style_small style_thumnail_2"><img src="./image/story_002_img_002.png" alt="썸네일 2"></a>
-                                <a href="#" class="style_small style_thumnail_3"><img src="./image/story_002_img_003.png" alt="썸네일 3"></a>
+                                <a href="./product_detail.html" class="style_small style_thumnail_1"><img src="./image/story_002_img_001.png" alt="썸네일 1"></a>
+                                <a href="./product_detail.html" class="style_small style_thumnail_2"><img src="./image/story_002_img_002.png" alt="썸네일 2"></a>
+                                <a href="./product_detail.html" class="style_small style_thumnail_3"><img src="./image/story_002_img_003.png" alt="썸네일 3"></a>
                         </div>
                     </div>
                         <div class="swiper-slide story3">
-                            <a href="#"><div class="style_image"></div></a>
+                            <a href="./product_detail.html"><div class="style_image"></div></a>
                             <div class="style_card_content">
                                 <h2 class="style_title">Light Steps, Bold Days</h2>
                                 <p class="style_subtitle">가볍고 편안한 바람막이와 셋업!</p>
@@ -321,14 +349,14 @@
                                 <p class="style_size">사이즈 : 100 ~ 150</p>
                             </div>
                             <div class="style_thumbnail">
-                                <a href="#" class="style_small style_thumnail_1"><img src="./image/style_03-01.png" alt="썸네일 1"></a>
-                                <a href="#" class="style_small style_thumnail_2"><img src="./image/style_03-02.png" alt="썸네일 2"></a>
-                                <a href="#" class="style_small style_thumnail_3"><img src="./image/style_03-03.png" alt="썸네일 3"></a>
-                                <a href="#" class="style_small style_thumnail_4"><img src="./image/style_03-04.png" alt="썸네일 3"></a>
+                                <a href="./product_detail.html" class="style_small style_thumnail_1"><img src="./image/style_03-01.png" alt="썸네일 1"></a>
+                                <a href="./product_detail.html" class="style_small style_thumnail_2"><img src="./image/style_03-02.png" alt="썸네일 2"></a>
+                                <a href="./product_detail.html" class="style_small style_thumnail_3"><img src="./image/style_03-03.png" alt="썸네일 3"></a>
+                                <a href="./product_detail.html" class="style_small style_thumnail_4"><img src="./image/style_03-04.png" alt="썸네일 3"></a>
                             </div>
                         </div>
                         <div class="swiper-slide story4">
-                            <a href="#"><div class="style_image"></div></a>
+                            <a href="./product_detail.html"><div class="style_image"></div></a>
                             <div class="style_card_content">
                                 <h2 class="style_title">When I was young as you</h2>
                                 <p class="style_subtitle">함께 걷는 순간, 스타일도 함께</p>
@@ -336,10 +364,10 @@
                                 <p class="style_size">사이즈 : 170 ~ 220</p>
                             </div>
                             <div class="style_thumbnail">
-                                <a href="#" class="style_small"><img src="./image/style01_small_01.png" alt="썸네일 1"></a>
-                                <a href="#" class="style_small"><img src="./image/style01_small_02.png" alt="썸네일 2"></a>
-                                <a href="#" class="style_small"><img src="./image/style01_small_03.png" alt="썸네일 3"></a>
-                                <a href="#" class="style_small"><img src="./image/style01_small_01.png" alt="썸네일 4"></a>
+                                <a href="./product_detail.html" class="style_small"><img src="./image/style01_small_01.png" alt="썸네일 1"></a>
+                                <a href="./product_detail.html" class="style_small"><img src="./image/style01_small_02.png" alt="썸네일 2"></a>
+                                <a href="./product_detail.html" class="style_small"><img src="./image/style01_small_03.png" alt="썸네일 3"></a>
+                                <a href="./product_detail.html" class="style_small"><img src="./image/style01_small_01.png" alt="썸네일 4"></a>
                             </div>
                         </div>
                     </div>
@@ -364,12 +392,12 @@
                     <div class="style_card_row">
                         <div class="style_cards">
                             <div class="filter_card_img">
-                                <img src="./image/filter_img_001.png" alt="안감 코듀로이 일자팬츠">
+                                <a href="./product_detail.html"><img src="./image/filter_img_001.png" alt="안감 코듀로이 일자팬츠"></a>
                                 <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
                                 <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                             </div>
                             <div class="filter_card_info">
-                                <h2><a href="#" class="product_title">안감 코듀로이 일자팬츠</a></h2>
+                                <h2><a href="./product_detail.html" class="product_title">안감 코듀로이 일자팬츠</a></h2>
                                 <p class="product_size">사이즈 : 120 ~ 160</p>
                                 <p class="product_price">79,900원</p>
                             </div>
@@ -381,19 +409,19 @@
                                 <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                             </div>
                             <div class="filter_card_info">
-                                <h2><a href="#" class="product_title">IV9060EX</a></h2>
+                                <h2><a href="./product_detail.html" class="product_title">IV9060EX</a></h2>
                                 <p class="product_size">사이즈 : 100 ~ 160</p>
                                 <p class="product_price">109,900원</p>
                             </div>
                         </div>
                         <div class="style_cards">
                             <div class="filter_card_img">
-                                <img src="./image/filter_img_003.png" alt="고학년 가방">
+                                <a href="./product_detail.html"><img src="./image/filter_img_003.png" alt="고학년 가방"></a>
                                 <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
                                 <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                             </div>
                             <div class="filter_card_info">
-                                <h2><a href="#" class="product_title">[CREW BAG] 고학년 가방</a></h2>
+                                <h2><a href="./product_detail.html" class="product_title">[CREW BAG] 고학년 가방</a></h2>
                                 <p class="product_size">사이즈 : FREE</p>
                                 <p class="product_price">139,000원</p>
                             </div>
@@ -402,36 +430,36 @@
                     <div class="style_card_row">
                         <div class="style_cards">
                             <div class="filter_card_img">
-                                <img src="./image/filter_img_001.png" alt="중목 양말">
+                                <a href="./product_detail.html"><img src="./image/filter_img_001.png" alt="중목 양말"></a>
                                 <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
                                 <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                             </div>
                             <div class="filter_card_info">
-                                <h2><a href="#" class="product_title">[3PCS] 중목 양말</a></h2>
+                                <h2><a href="./product_detail.html" class="product_title">[3PCS] 중목 양말</a></h2>
                                 <p class="product_size">사이즈 : 160 ~ 220</p>
                                 <p class="product_price">71,900원</p>
                             </div>
                         </div>
                         <div class="style_cards">
                             <div class="filter_card_img">
-                                <img src="./image/filter_img_003.png" alt="고학년 가방">
+                                <a href="./product_detail.html"><img src="./image/filter_img_003.png" alt="고학년 가방"></a>
                                 <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
                                 <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                             </div>
                             <div class="filter_card_info">
-                                <h2><a href="#" class="product_title">[CREW BAG] 고학년 가방</a></h2>
+                                <h2><a href="./product_detail.html" class="product_title">[CREW BAG] 고학년 가방</a></h2>
                                 <p class="product_size">사이즈 : FREE</p>
                                 <p class="product_price">139,000원</p>
                             </div>
                         </div>
                         <div class="style_cards">
                             <div class="filter_card_img">
-                                <img src="./image/filter_img_001.png" alt="안감 코듀로이 일자팬츠">
+                                <a href="./product_detail.html"><img src="./image/filter_img_001.png" alt="안감 코듀로이 일자팬츠"></a>
                                 <button type="button" class="like_btn"><img src="./image/like_icon.png" alt="관심상품 등록하기"></button>
                                 <button type="button" class="cart_btn"><img src="./image/cart_unact_icon.png" alt="장바구니에 추가하기"></button>
                             </div>
                             <div class="filter_card_info">
-                                <h2><a href="#" class="product_title">안감 코듀로이 일자팬츠</a></h2>
+                                <h2><a href="./product_detail.html" class="product_title">안감 코듀로이 일자팬츠</a></h2>
                                 <p class="product_size">사이즈 : 120 ~ 160</p>
                                 <p class="product_price">79,900원</p>
                             </div>

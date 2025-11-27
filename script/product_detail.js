@@ -12,7 +12,7 @@ thumbnailImg.forEach((thumb, index) => {
             item.style.border = 'none';
         });
     thumb.style.border = '1.5px solid #CF0A2C';
-    mainImg.style.backgroundImage = `url('../image/product_thum_00${index + 1}.png')`;
+    mainImg.style.backgroundImage = `url('/image/product_thum_00${index + 1}.png')`;
     mainImg.style.backgroundRepeat = 'no-repeat';
     mainImg.style.backgroundSize = 'cover';
     });

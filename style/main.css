@@ -37,11 +37,19 @@ body header .right_gnb {
   align-items: center;
 }
 body header .right_gnb a:hover {
-  transform: scale(1.2);
   transition: linear;
 }
 body header .right_gnb a:hover::after {
   border-bottom: 0.7px solid #CF0A2C;
+}
+body header .right_gnb a svg {
+  transform: scale(1.02);
+}
+body .fixed_top_btn #tothetop_btn {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  z-index: 998;
 }
 body .page-home .main_bnr_swiper_box {
   max-width: 100vw;
@@ -51,21 +59,53 @@ body .page-home .main_bnr_swiper_box #main_bnr_swiper {
   height: 864px;
 }
 body .page-home .main_bnr_swiper_box #main_bnr_swiper .swiper-wrapper .swiper-slide {
+  display: block;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+body .page-home .main_bnr_swiper_box #main_bnr_swiper .swiper-wrapper .swiper-slide > span {
+  font-size: clamp(2rem, 2vw, 5rem);
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  position: absolute;
+}
 body .page-home .main_bnr_swiper_box #main_bnr_swiper .swiper-wrapper .slide1 {
   background-image: url(../image/banner_main_001.png);
+  position: relative;
+}
+body .page-home .main_bnr_swiper_box #main_bnr_swiper .swiper-wrapper .slide1 > span {
+  top: 10%;
+  left: 40%;
+  transform: translateX(-50%);
+  color: #000;
 }
 body .page-home .main_bnr_swiper_box #main_bnr_swiper .swiper-wrapper .slide2 {
   background-image: url(../image/banner_main_002.jpg);
 }
+body .page-home .main_bnr_swiper_box #main_bnr_swiper .swiper-wrapper .slide2 > span {
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
 body .page-home .main_bnr_swiper_box #main_bnr_swiper .swiper-wrapper .slide3 {
   background-image: url(../image/banner_main_003.jpg);
 }
+body .page-home .main_bnr_swiper_box #main_bnr_swiper .swiper-wrapper .slide3 > span {
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
 body .page-home .main_bnr_swiper_box #main_bnr_swiper .swiper-wrapper .slide4 {
   background-image: url(../image/banner_main_004.jpg);
+}
+body .page-home .main_bnr_swiper_box #main_bnr_swiper .swiper-wrapper .slide4 > span {
+  top: 50%;
+  left: 20%;
+  transform: translateX(-50%);
+  color: #000;
 }
 body .page-home .shop_by_age {
   margin: 0 auto;
@@ -117,7 +157,7 @@ body .page-home .shop_by_age .age_wrap .model_img .img {
   height: 100%;
   width: 100%;
   background-image: url(../image/age_model_001.jpg);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -136,10 +176,21 @@ body .page-home .shop_by_age .age_wrap #age_swiper .swiper-wrapper .product_card
 body .page-home .shop_by_age .age_wrap #age_swiper .swiper-wrapper .product_card .age_card a {
   display: block;
   overflow: hidden;
+  transition: box-shadow 0.3s ease;
   /* так как это свайпер задавать ширину и высоту не надо */
 }
+body .page-home .shop_by_age .age_wrap #age_swiper .swiper-wrapper .product_card .age_card a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
 body .page-home .shop_by_age .age_wrap #age_swiper .swiper-wrapper .product_card .age_card a img {
+  overflow: hidden;
+  transition: transform 0.3s ease;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+body .page-home .shop_by_age .age_wrap #age_swiper .swiper-wrapper .product_card .age_card a img:hover {
+  transform: scale(1.05);
 }
 body .page-home .shop_by_age .age_wrap #age_swiper .swiper-wrapper .product_card .age_card .product_info {
   display: flex;
@@ -287,9 +338,18 @@ body .page-home .trending .trend_swiper_wrap #trend_swiper {
 body .page-home .trending .trend_swiper_wrap #trend_swiper .swiper-wrapper .swiper-slide .trend_product {
   /* width: 230px; height: 230px; */
   position: relative;
+  transition: all 0.3s ease;
+}
+body .page-home .trending .trend_swiper_wrap #trend_swiper .swiper-wrapper .swiper-slide .trend_product:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 body .page-home .trending .trend_swiper_wrap #trend_swiper .swiper-wrapper .swiper-slide .trend_product .trend_product_img {
   width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+body .page-home .trending .trend_swiper_wrap #trend_swiper .swiper-wrapper .swiper-slide .trend_product .trend_product_img:hover {
+  transform: scale(1.04);
 }
 body .page-home .trending .trend_swiper_wrap #trend_swiper .swiper-wrapper .swiper-slide .trend_product .img_icons {
   display: flex;
@@ -405,13 +465,6 @@ body .page-home .style_stories .style_swiper_wrap #stylestory_swiper .swiper-wra
   min-height: 510px; /* высота картинок, нужна чтобы картинки показывались, так как сам по себе див пустой */
   max-width: 475px;
 }
-body .page-home .style_stories .style_swiper_wrap #stylestory_swiper .swiper-wrapper .swiper-slide .style_image a {
-  overflow: hidden;
-  display: inline-block;
-}
-body .page-home .style_stories .style_swiper_wrap #stylestory_swiper .swiper-wrapper .swiper-slide .style_image a img {
-  width: 100%;
-}
 body .page-home .style_stories .style_swiper_wrap #stylestory_swiper .swiper-wrapper .swiper-slide .style_card_content {
   display: flex;
   flex-flow: column nowrap;
@@ -461,17 +514,21 @@ body .page-home .style_stories .style_swiper_wrap #stylestory_swiper .swiper-wra
   min-width: 50px;
   border: 1px solid #A0A0A0;
   border-radius: 5px;
-  /* background-image: url('../image/style01_small_01.png');
-  @include background_img; */
+  transition: all 0.3s ease;
 }
 body .page-home .style_stories .style_swiper_wrap #stylestory_swiper .swiper-wrapper .swiper-slide .style_thumbnail .style_small:hover {
   border: 1px solid #CF0A2C;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 body .page-home .style_stories .style_swiper_wrap #stylestory_swiper .swiper-wrapper .swiper-slide .style_thumbnail .style_small img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: all 0.3s ease;
+}
+body .page-home .style_stories .style_swiper_wrap #stylestory_swiper .swiper-wrapper .swiper-slide .style_thumbnail .style_small img:hover {
+  transform: scale(1.06);
 }
 body .page-home .style_stories .style_swiper_wrap #stylestory_swiper .swiper-wrapper .story1 a .style_image {
   background-position: center;
@@ -561,7 +618,7 @@ body .page-home .find_their_style .find_their_style_wrap .card_content_wrap .car
   position: relative;
   width: 220px;
   height: 220px;
-  transition: transform 0.3 ease;
+  transition: transform 0.3s ease;
 }
 body .page-home .find_their_style .find_their_style_wrap .card_content_wrap .card_content .style_card_row .style_cards .filter_card_img:hover {
   transform: scale(1.01);
@@ -676,6 +733,9 @@ body .page-home .our_stores .stores_wrap .store2 {
 body .page-home .our_stores .stores_wrap .store3 {
   background-image: url(../image/store_img_003.png);
 }
+body footer * p, body footer * span, body footer * li, body footer address {
+  font-size: clamp(0.6rem, 1.5vw, 1rem);
+}
 body footer {
   display: flex;
   flex-flow: column nowrap;
@@ -704,7 +764,7 @@ body footer .footer_top .top_menu a {
 }
 body footer .footer_top .top_menu a .menu_title {
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: clamp(0.6rem, 1.5vw, 1.25rem);
 }
 body footer .footer_btm {
   padding: 0 40px;
@@ -731,7 +791,7 @@ body footer .footer_btm .detailed_menu .menu_list {
 }
 body footer .footer_btm .detailed_menu .menu_list .list_title {
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: clamp(0.6rem, 1.5vw, 1.25rem);
 }
 body footer .footer_btm .detailed_info {
   display: flex;
@@ -796,6 +856,11 @@ body footer .footer_btm .detailed_info .certification {
   gap: 25px;
   justify-content: flex-start;
   align-items: center;
+}
+body footer .footer_btm .detailed_info .certification .certification_info {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 5px;
 }
 body footer .footer_btm .detailed_info .copyright {
   margin-top: 15px;
@@ -1562,12 +1627,20 @@ html body .page-details .prd_purchase .product_details_container .order_info .or
   }
   /* Tablet 1 row banner */
   body .page-home .main_bnr_swiper_box #main_bnr_swiper .swiper-wrapper .slide1 {
+    background-position: top;
     background-image: url(../image/tablet_banner_001.jpg);
+  }
+  body .page-home .main_bnr_swiper_box #main_bnr_swiper .swiper-wrapper .slide1 > span {
+    top: 10%;
+    left: 70%;
   }
   /* Tablet 2 row age */
   body .page-home .shop_by_age .age_wrap .model_img {
     width: 409px;
     height: 573px;
+  }
+  body .page-home .shop_by_age .age_wrap .model_img > img {
+    background-position: top;
   }
   body .page-home .shop_by_age .age_wrap #age_swiper {
     width: 100%;
@@ -1636,9 +1709,13 @@ html body .page-details .prd_purchase .product_details_container .order_info .or
     max-width: 1024px;
   }
   body footer .footer_btm {
-    /* @include flex-col;
+    display: flex;
+    flex-flow: column nowrap;
     justify-content: flex-start;
-    align-items: center; */
+    align-items: flex-start;
+  }
+  body footer .footer_btm .detailed_menu {
+    display: none;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -1690,6 +1767,9 @@ html body .page-details .prd_purchase .product_details_container .order_info .or
   body .page-home .shop_by_age .age_wrap .model_img {
     width: 100%;
     height: 573px;
+  }
+  body .page-home .shop_by_age .age_wrap .model_img > img {
+    background-position: top;
   }
   body .page-home .shop_by_age .age_wrap #age_swiper {
     width: 100%;

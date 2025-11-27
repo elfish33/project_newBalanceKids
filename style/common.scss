@@ -186,5 +186,5 @@ $size10: 0.625rem;
 }
 @mixin footer_title {
     font-weight: $bold;
-    font-size: 1.25rem;
+    font-size: clamp(0.6rem, 1.5vw, 1.25rem);
 }
