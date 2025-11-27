@@ -1489,8 +1489,13 @@ html body .page-details .prd_purchase .product_details_container #orderFrm .link
 html body .page-details .prd_purchase .product_details_container #orderFrm .linked_product_box .linked_products .linked_product3 {
   background-image: url(../image/linked_003.png);
 }
+html body .page-details .prd_purchase .product_details_container #orderFrm .pickup_option {
+  position: relative;
+}
 html body .page-details .prd_purchase .product_details_container #orderFrm .pickup_option #pickup {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  position: absolute;
 }
 html body .page-details .prd_purchase .product_details_container #orderFrm .pickup_option #pickup:checked + label {
   background-repeat: no-repeat;
