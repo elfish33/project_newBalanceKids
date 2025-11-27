@@ -1284,7 +1284,7 @@ html body .page-details .prd_purchase .product_details_container .membership_inf
 }
 html body .page-details .prd_purchase .product_details_container .membership_info .membership_icon {
   width: 22px;
-  height: 10px;
+  height: 14px;
 }
 html body .page-details .prd_purchase .product_details_container .membership_info .membership_text {
   font-size: 0.688rem;
@@ -1337,8 +1337,16 @@ html body .page-details .prd_purchase .product_details_container .product_main_i
   align-items: center;
   gap: 10px;
 }
+html body .page-details .prd_purchase .product_details_container .product_main_info .like_share_btn .like_btn {
+  position: relative;
+}
 html body .page-details .prd_purchase .product_details_container .product_main_info .like_share_btn .like_btn #like_icn {
-  display: none;
+  /* display: none; */
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  opacity: 0;
+  /* pointer-events:unset; */
 }
 html body .page-details .prd_purchase .product_details_container .product_main_info .like_share_btn .like_btn #like_icn:checked + label {
   background-image: url(../image/like_active.svg);
@@ -1349,6 +1357,7 @@ html body .page-details .prd_purchase .product_details_container .product_main_i
   width: 24px;
   height: 24px;
   display: inline-block;
+  cursor: pointer;
 }
 html body .page-details .prd_purchase .product_details_container .product_main_info .like_share_btn .share_btn svg {
   width: 24px;

@@ -150,7 +150,7 @@ html {
                         justify-content: flex-start;
                         align-items: center;
                         gap: 6px;
-                        .membership_icon {width: 22px; height: 10px;}
+                        .membership_icon {width: 22px; height: 14px;}
                         .membership_text {
                             font-size: $size11;
                             font-weight: $light;
@@ -192,8 +192,13 @@ html {
                             @include flex-row;
                             align-items: center; gap: 10px;
                             .like_btn {
+                                position: relative;
                                 #like_icn {
-                                    display: none;
+                                    /* display: none; */
+                                    position: absolute;
+                                    top: 20%; left: 30%;
+                                    opacity: 0;
+                                    /* pointer-events:unset; */
                                     &:checked+label {background-image: url(../image/like_active.svg);}
                                 }
                                 label {
@@ -202,7 +207,7 @@ html {
                                     width: 24px;
                                     height: 24px;
                                     display: inline-block;
-                                    
+                                    cursor: pointer;
                                 }
                                 
                             }
